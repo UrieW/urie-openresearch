@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://d0j0a1ybl5qkh"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_read3"]
+
+[resource]
+script = ExtResource("1_read3")
+body = "Hint: this can also be used on regular relationships, for extra protection.
+
+Dear Elohim,
+
+Please forgive me and my sins that I have made between me and my spirit spouses and sexual lovers,
+
+Dear Elohim,
+
+I declare that this marriage certificate between me and my spirit spouses and my sexual lovers is burned by trial of fire immediately,
+
+Dear Most High,
+
+Please deliver me from my spirit spouses and my sexual lovers,
+
+I pray in mighty Yeshua's Name,
+
+I love You,
+
+Hallelujah!
+"
+title = "Prayer to Stop Spirit Waifus"
+author = "Urie Wilson, LovelyGodOfficial"
+date = "10-25-2026"
+desc = "A payer to stop spirit spouses and all their related links"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

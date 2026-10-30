@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjwh0gsj788ji"
+path="res://.godot/imported/report4.mp3-72b4dfb309d72a990add0a25d5ec6e99.mp3str"
+
+[deps]
+
+source_file="res://assets/snd/reports/diaries/podcasts/emergency reports/2026/report4.mp3"
+dest_files=["res://.godot/imported/report4.mp3-72b4dfb309d72a990add0a25d5ec6e99.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

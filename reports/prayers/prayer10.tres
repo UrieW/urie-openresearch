@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://c60ydhcwhbac1"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_hherk"]
+
+[resource]
+script = ExtResource("1_hherk")
+body = "Our Elohim,
+Who are thou,
+
+Hallowed be thy name,
+
+Thy kingdom come,
+Thy will be done,
+
+On Earth,
+As it is, in heaven,
+
+Please give us our daily bread,
+And forgive us our trespasses,
+As we forgive those that trespass us,
+
+Lead us not into temptation,
+But deliver us from evil,
+
+For Yours, is the Spirit and the Light,
+
+In mighty Yeshua's Name,
+
+I love you,
+
+Hallelujah!"
+title = "The Elohim's Prayer"
+author = "Urie Wilson"
+date = "10-25-2026"
+desc = "The Elohim's Prayer"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

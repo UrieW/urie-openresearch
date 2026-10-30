@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://ciyc2648e3kiy"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_ov5iv"]
+
+[resource]
+script = ExtResource("1_ov5iv")
+body = "Dear Most High,
+
+Please send my prayers to the dead person or group that I loathe as a 
+gift to send to them on their journey.
+
+I pray in mighty Yeshua's Name,
+
+I love you.
+
+Hallelujah!"
+title = "Prayer to Send the Dead Back Home"
+author = "Urie Wilson"
+date = "10-25-2026"
+desc = "A prayer to send the dead back home"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

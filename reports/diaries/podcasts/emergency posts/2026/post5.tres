@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://c5mo4nxrsy1q2"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_u6tnp"]
+
+[resource]
+script = ExtResource("1_u6tnp")
+file = "uid://d2l6mc30pd5e"
+title = "October Emergency Report 2026"
+author = "Urie Wilson"
+date = "10-20-2026"
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

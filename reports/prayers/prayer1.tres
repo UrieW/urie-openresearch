@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://ddjutbwwre2e"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_m3k3v"]
+
+[resource]
+script = ExtResource("1_m3k3v")
+body = "Dear my Elohim,
+
+Please forgive my sins and my mistakes, and purify my soul and spirit.
+
+Yahuah,
+
+Have mercy on me and deliver my blessings to me.
+
+Thank you for your mercy and forgiveness.
+
+I pray in the mighty name of Yeshua.
+
+i love you.
+ 
+Hallelujah!"
+title = "Prayer to Restore Blessings"
+author = "Urie Wilson, LovelyGodOfficial"
+date = "10-25-2026"
+desc = "A prayer to restore blessings"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

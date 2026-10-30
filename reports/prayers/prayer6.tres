@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://coqdkv0x25ak1"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_vhsrq"]
+
+[resource]
+script = ExtResource("1_vhsrq")
+body = "Dear my Elohim,
+
+I command that Angels of Yahuah protect me and my family no matter where we are going, and no matter what we are doing today!
+
+Yahuah,
+
+Cancel all evil spirits’ activities on us. Cancel their evil plans!
+
+Thank you for your help.
+
+I pray in the mighty name of Yeshua.
+
+I love you.
+
+Hallelujah!"
+title = "Prayer for Protection"
+author = "Urie Wilson, LovelyGodOfficial"
+date = "10-25-2026"
+desc = "A prayer for Divine Protection"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

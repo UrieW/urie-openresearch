@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://bibcvdjqi2rgq"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_ehtfm"]
+
+[resource]
+script = ExtResource("1_ehtfm")
+body = "Dear my Elohim,
+
+Please bring my dreams back to my remembrance right now.
+
+I declare that I must remember my dream now.
+
+I pray in the mighty name of Yeshua.
+
+i love you.
+
+Hallelujah!"
+title = "Prayer to Restore Your Dreams"
+author = "Urie Wilson, LovelyGodOfficial"
+date = "10-25-2026"
+desc = "A prayer to restore your dreams"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://drsboegdjvrp3"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_3svr0"]
+
+[resource]
+script = ExtResource("1_3svr0")
+file = "uid://cl256d0fgh43p"
+title = "Dream Log '21-24"
+author = "Urie Wilson"
+date = "10-25-26"
+desc = "This document gives all the dreams Urie has had so far, between 2021 and 2024..."
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

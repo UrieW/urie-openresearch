@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://jqlyamxnbv38"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_shcn6"]
+
+[resource]
+script = ExtResource("1_shcn6")
+file = "uid://bv28gpmx3c8ru"
+title = "August Emergency Report 2026"
+author = "Urie Wilson"
+date = "8-28-2026"
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

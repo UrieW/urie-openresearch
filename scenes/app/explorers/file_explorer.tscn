@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://ctwimwjdry8fa"]
+
+[ext_resource type="Script" uid="uid://det80om7ugits" path="res://scripts/app/explorers/file_explorer.gd" id="1_fj7rl"]
+[ext_resource type="StyleBox" uid="uid://dov5ojj1ufpxr" path="res://shaders/windowstyle1.tres" id="1_i8734"]
+[ext_resource type="StyleBox" uid="uid://cpwrhl42uw007" path="res://shaders/windowstyle2.tres" id="1_lx5on"]
+
+[node name="fileexplorer" type="Control" unique_id=1777768152]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fj7rl")
+
+[node name="explorer" type="Panel" parent="." unique_id=1962162731]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.69100004
+anchor_bottom = 0.75600004
+offset_right = -2.2400208
+offset_bottom = -2.1600037
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_lx5on")
+
+[node name="fcmargins" type="MarginContainer" parent="explorer" unique_id=917181667]
+custom_maximum_size = Vector2(425, 200)
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.018000001
+anchor_top = 0.030000001
+anchor_right = 0.98200005
+anchor_bottom = 0.767
+offset_left = 0.07999945
+offset_top = -0.10000038
+offset_right = 0.9199829
+offset_bottom = 0.9099884
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="filegrid" type="GridContainer" parent="explorer/fcmargins" unique_id=1502566394]
+custom_minimum_size = Vector2(40, 60)
+custom_maximum_size = Vector2(405, 185)
+propagate_maximum_size = false
+layout_mode = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 15
+columns = 5
+
+[node name="navibox" type="HBoxContainer" parent="explorer" unique_id=1810567591]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.113000005
+anchor_top = 0.83000004
+anchor_right = 0.943
+anchor_bottom = 0.94500005
+offset_left = 0.166996
+offset_top = 0.069992065
+offset_right = -29.795013
+offset_bottom = -0.09500122
+
+[node name="ae" type="Button" parent="explorer/navibox" unique_id=416684103]
+layout_mode = 2
+text = "AE"
+
+[node name="dbtn" type="Button" parent="explorer/navibox" unique_id=339088488]
+layout_mode = 2
+text = "  !  "
+
+[node name="tbtn" type="Button" parent="explorer/navibox" unique_id=1513931290]
+layout_mode = 2
+text = " T "
+
+[node name="fexit" type="Button" parent="explorer/navibox" unique_id=1415423483]
+layout_mode = 2
+text = "Exit Folder"
+
+[node name="back" type="Button" parent="explorer/navibox" unique_id=606369269]
+layout_mode = 2
+text = "<     "
+
+[node name="pagelabel" type="Label" parent="explorer/navibox" unique_id=276789680]
+texture_filter = 1
+layout_mode = 2
+text = "0"
+
+[node name="next" type="Button" parent="explorer/navibox" unique_id=392186204]
+layout_mode = 2
+text = "     > "
+
+[node name="eabtn" type="Button" parent="explorer/navibox" unique_id=1802858712]
+layout_mode = 2
+text = "Exit App"
+
+[node name="iteminfo" type="Panel" parent="." unique_id=2145113379]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.74200004
+anchor_right = 0.69100004
+anchor_bottom = 1.0
+offset_top = -0.120025635
+offset_right = -0.24002075
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = ExtResource("1_i8734")
+
+[node name="info" type="RichTextLabel" parent="iteminfo" unique_id=1460271444]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.054
+anchor_top = 0.15100001
+anchor_right = 0.95000005
+anchor_bottom = 0.80600005
+offset_left = 0.13199997
+offset_top = -0.043001175
+offset_right = 0.099975586
+offset_bottom = 0.041992188
+text = "Info"
+
+[node name="subinfo1" type="Panel" parent="." unique_id=1364928745]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.684
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.23999023
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_i8734")
+
+[node name="iteminfo" type="RichTextLabel" parent="subinfo1" unique_id=1044744483]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.074
+anchor_top = 0.042000003
+anchor_right = 0.92100006
+anchor_bottom = 0.95300007
+offset_left = 0.052000046
+offset_top = -0.12000084
+offset_right = -0.042007446
+offset_bottom = -0.08001709
+grow_horizontal = 2
+text = "item info"

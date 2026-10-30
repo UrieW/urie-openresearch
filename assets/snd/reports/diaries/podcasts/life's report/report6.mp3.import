@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bpfk2k6pdx6jo"
+path="res://.godot/imported/report6.mp3-ff2c49688121e59e72abf6617253ef71.mp3str"
+
+[deps]
+
+source_file="res://assets/snd/reports/diaries/podcasts/life's report/report6.mp3"
+dest_files=["res://.godot/imported/report6.mp3-ff2c49688121e59e72abf6617253ef71.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

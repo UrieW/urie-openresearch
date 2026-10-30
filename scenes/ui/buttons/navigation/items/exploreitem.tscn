@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b3r747kja5dfy"]
+
+[ext_resource type="Texture2D" uid="uid://clvjsuwe5e7gl" path="res://assets/gfx/gui/icons/akar-icons-file/akar-icons--file.png" id="1_pj11l"]
+[ext_resource type="Script" uid="uid://b440ypl2hyaxx" path="res://scripts/base/ui/buttons/icons/exploreitem.gd" id="2_peaxk"]
+[ext_resource type="Script" uid="uid://cgw1jii8eqov4" path="res://scripts/base/ui/buttons/triggers/reportslot.gd" id="3_i52o5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i52o5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnbfn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wehsb"]
+bg_color = Color(1, 1, 0.21176471, 0.5176471)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncge8"]
+bg_color = Color(1, 1, 0.21176471, 0.5176471)
+
+[node name="exploreitem" type="Button" unique_id=1069751783]
+texture_filter = 1
+propagate_maximum_size = true
+anchors_preset = -1
+anchor_right = 0.062000003
+anchor_bottom = 0.16700001
+offset_right = 0.3199997
+offset_bottom = -0.12000275
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_constants/icon_max_width = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_i52o5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fnbfn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wehsb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ncge8")
+icon = ExtResource("1_pj11l")
+script = ExtResource("2_peaxk")
+
+[node name="itemnum" type="Label" parent="." unique_id=319080282]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.275
+anchor_top = 0.633
+anchor_right = 0.725
+anchor_bottom = 1.033
+offset_top = 0.020000458
+offset_bottom = 0.020000458
+text = "0"
+horizontal_alignment = 1
+visible_characters = 2
+visible_ratio = 2.0
+
+[node name="reportslot" type="Node" parent="." unique_id=1480604113]
+script = ExtResource("3_i52o5")

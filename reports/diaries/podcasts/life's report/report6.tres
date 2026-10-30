@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://bxs16vl0nmwfb"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_ed16k"]
+
+[resource]
+script = ExtResource("1_ed16k")
+file = "uid://bpfk2k6pdx6jo"
+title = "Urie's Franchise Life"
+author = "Urie Wilson"
+date = "10-20-2026"
+desc = "The document tells about the things Urie realized about his consumerism through the ages..."
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

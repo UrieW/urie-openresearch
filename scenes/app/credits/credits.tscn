@@ -1,0 +1,138 @@
+[gd_scene format=3 uid="uid://co2ld3oc8vupl"]
+
+[ext_resource type="Script" uid="uid://bo0xhrmsy00de" path="res://scripts/app/credits/credits.gd" id="1_pfxi4"]
+[ext_resource type="AudioStream" uid="uid://jbkmtdk4vjcn" path="res://assets/snd/bgm/menuLoops_pad.ogg" id="2_qhoge"]
+
+[node name="credits" type="Control" unique_id=1389818129]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pfxi4")
+
+[node name="bkg" type="ColorRect" parent="." unique_id=1824382553]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.25882354, 0.25882354, 0.25882354, 0.3764706)
+
+[node name="scrolls" type="ScrollContainer" parent="." unique_id=815787318]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="margins" type="MarginContainer" parent="scrolls" unique_id=576316702]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 360
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 360
+
+[node name="lab" type="RichTextLabel" parent="scrolls/margins" unique_id=1687847243]
+layout_mode = 2
+bbcode_enabled = true
+text = "urie's open research credits
+by urie wilson
+
+staff
+-------
+
+executive producer
+---------------------
+urie wilson
+
+art director
+------
+urie wilson
+
+music director
+-------
+urie wilson
+
+lead programmer
+---------------
+urie wilson
+
+event director
+------------------
+urie wilson
+
+online voting designer
+-------------------
+urie wilson
+
+podcast report data by
+-----------------------
+urie wilson
+libreoffice
+notebook lm
+
+report data sources
+---------------------
+the Elohim
+all met enemy sources
+all met celeb sources
+all met criminal sources
+all met animal sources
+all met monster sources
+all met cryptid sources
+all met alien sources
+all met Prophet sources
+all met supernatural sources
+all met government sources
+all met patron sources
+all met family sources
+all met friend sources
+all met contact sources
+all met history sources
+all met media sources
+all met product sources
+
+art by
+-----------
+urie wilson
+akar icons
+charm
+ant design
+fluent
+iconify
+
+music by
+----------
+urie wilson
+yubatake
+
+sounds by
+-----------
+urie wilson
+independent nu ljudbank
+AD Sounds
+
+made with
+-----------
+godot
+inkscape
+notebook lm
+ubuntu
+gnome text editor
+lmms
+opengameart.org
+libreoffice
+synfig
+
+Thank you for using this app!"
+fit_content = true
+
+[node name="bgmp" type="AudioStreamPlayer" parent="." unique_id=1742761718]
+stream = ExtResource("2_qhoge")

@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://b3mpdgmxavjqi"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_mb7pv"]
+
+[resource]
+script = ExtResource("1_mb7pv")
+body = "Dear my Elohim,
+
+I command that Angels of Yahuah arrest evil snake demon trying to steal and ruin anything that belongs to me.
+
+Yahuah,
+
+Please protect anything that belongs to me, and cancel demonic movements in my daily life.
+
+Yahuah,
+
+Deliver me from the snake demon’s evil plans.
+
+I pray in the mighty name of Yeshua.
+
+i love you.
+
+Hallelujah!
+"
+title = "Prayer Against Snake Demons"
+author = "Urie Wilson, LovelyGodOfficial"
+date = "10-25-2026"
+desc = "A prayer to use against snake demons"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

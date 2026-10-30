@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://mwvrlj6drq8a"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_cgnbs"]
+
+[resource]
+script = ExtResource("1_cgnbs")
+body = "Dear Elohim,
+
+Please guide me with your Holy Power, for I have discernment.
+
+Dear Elohim,
+
+Please guide me through my discernment with your Holy Power.
+
+I pray in mighty Yeshua's Name.
+
+I love you.
+
+Hallelujah!
+"
+title = "Prayer for Discernment"
+author = "Urie Wilson, LovelyGodOfficial"
+date = "10-25-2026"
+desc = "A prayer for Divine Discernment"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

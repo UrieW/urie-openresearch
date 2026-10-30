@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://dpywd2gs177j5"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_itowp"]
+
+[resource]
+script = ExtResource("1_itowp")
+body = "We give thanks to Yeshua Almighty, for the food that He brought us through His Power, and without It, we would cease to exist, and we will never seize the victory
+
+I pray in mighty Yeshua's Name,
+
+I love you.
+
+Hallelujah!
+"
+title = "Food Blessing Prayer"
+author = "Urie Wilson"
+date = "10-25-2026"
+desc = "A prayer over your food for Divine Deliverance"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

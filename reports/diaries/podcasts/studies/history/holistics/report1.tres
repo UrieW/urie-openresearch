@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://bokwequytjsqu"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_gktu2"]
+
+[resource]
+script = ExtResource("1_gktu2")
+file = "uid://d1quv523iw71a"
+title = "Urie's Holistic Notes 1"
+author = "Urie Wilson"
+date = "10-25-2026"
+desc = "This document tells of many holistic notes Urie found in his life, so far..."
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4gpjfobmiiwo"
+path="res://.godot/imported/report2.mp3-21f629e2696209706fb5351619975d58.mp3str"
+
+[deps]
+
+source_file="res://assets/snd/reports/diaries/podcasts/studies/history/crime and exploration/report2.mp3"
+dest_files=["res://.godot/imported/report2.mp3-21f629e2696209706fb5351619975d58.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

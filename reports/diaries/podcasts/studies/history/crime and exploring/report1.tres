@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://cvvvbpb4rhxww"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_4l2ki"]
+
+[resource]
+script = ExtResource("1_4l2ki")
+file = "uid://elkowoq8g04a"
+title = "Urie's Crime Info"
+author = "Urie Wilson"
+date = "10-25-2026"
+desc = "This document tells of  much crime evidence Urie found in his life, so far..."
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

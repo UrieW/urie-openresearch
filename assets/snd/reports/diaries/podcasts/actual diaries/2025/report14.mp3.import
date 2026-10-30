@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brgvf45yfyvva"
+path="res://.godot/imported/report14.mp3-86710f5b6256aa257f92084be18b6068.mp3str"
+
+[deps]
+
+source_file="res://assets/snd/reports/diaries/podcasts/actual diaries/2025/report14.mp3"
+dest_files=["res://.godot/imported/report14.mp3-86710f5b6256aa257f92084be18b6068.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://cfj0crdfatn3f"]
+
+[ext_resource type="Script" uid="uid://ct2p3d4cju70b" path="res://scripts/app/explorers/text_explorer.gd" id="1_qv0mg"]
+[ext_resource type="StyleBox" uid="uid://dov5ojj1ufpxr" path="res://shaders/windowstyle1.tres" id="1_u1tf7"]
+
+[node name="textexplorer" type="Control" unique_id=1777768152]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qv0mg")
+
+[node name="explorer" type="Panel" parent="." unique_id=1962162731]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.003
+anchor_right = 0.69100004
+anchor_bottom = 0.84200007
+offset_top = -1.08
+offset_right = -1.2400208
+offset_bottom = -1.1200256
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_u1tf7")
+
+[node name="text" type="RichTextLabel" parent="explorer" unique_id=803941157]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.081
+anchor_right = 0.95000005
+anchor_bottom = 0.90800005
+offset_left = -0.050001144
+offset_top = 0.048999786
+offset_right = 0.049987793
+offset_bottom = -0.06800842
+text = "text"
+scroll_active = false
+
+[node name="controls" type="Panel" parent="." unique_id=1443439172]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.83100003
+anchor_right = 0.69100004
+anchor_bottom = 1.0
+offset_top = -0.16000366
+offset_right = -0.24002075
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = ExtResource("1_u1tf7")
+
+[node name="pgctrls" type="HBoxContainer" parent="controls" unique_id=1874313801]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22900002
+anchor_top = 0.279
+anchor_right = 0.749
+anchor_bottom = 0.83800006
+offset_left = -0.21800995
+offset_top = -0.019001007
+offset_right = -0.058013916
+offset_bottom = -3.1180038
+
+[node name="dbtn" type="Button" parent="controls/pgctrls" unique_id=445624438]
+layout_mode = 2
+text = " ! "
+
+[node name="tbtn" type="Button" parent="controls/pgctrls" unique_id=132204534]
+layout_mode = 2
+text = " T "
+
+[node name="back" type="Button" parent="controls/pgctrls" unique_id=1005093998]
+layout_mode = 2
+text = "<    "
+
+[node name="page" type="Label" parent="controls/pgctrls" unique_id=638330188]
+layout_mode = 2
+text = "0"
+
+[node name="next" type="Button" parent="controls/pgctrls" unique_id=1118221396]
+layout_mode = 2
+text = "    >"
+
+[node name="votebtn" type="Button" parent="controls/pgctrls" unique_id=341749545]
+layout_mode = 2
+text = "  V "
+
+[node name="close" type="Button" parent="controls/pgctrls" unique_id=354401088]
+layout_mode = 2
+text = "Close"
+
+[node name="subinfo" type="Panel" parent="." unique_id=1364928745]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.684
+anchor_right = 1.0
+anchor_bottom = 0.42200002
+offset_left = 0.23999023
+offset_bottom = 0.07998657
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_u1tf7")
+
+[node name="subtext" type="RichTextLabel" parent="subinfo" unique_id=1702908319]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.069000006
+anchor_top = 0.112
+anchor_right = 0.92100006
+anchor_bottom = 0.882
+offset_left = 0.061998367
+offset_top = -0.024000168
+offset_right = -0.042007446
+offset_bottom = -0.06401062
+text = "Title:
+titles
+
+Author:
+authors"
+
+[node name="subinfo2" type="Panel" parent="." unique_id=1867458799]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.684
+anchor_top = 0.40800002
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.23999023
+offset_top = 0.11999512
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_u1tf7")
+
+[node name="subtext2" type="RichTextLabel" parent="subinfo2" unique_id=511787780]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08400001
+anchor_top = 0.085
+anchor_right = 0.906
+anchor_bottom = 0.90800005
+offset_left = 0.031999588
+offset_top = -0.10499191
+offset_right = -0.012008667
+offset_bottom = 0.6299896
+text = "Words:
+wordnum
+Lines:
+linenum
+Paragraphs:
+paranum
+Sentences:
+snum
+"

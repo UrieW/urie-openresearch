@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://1ehmwyg4mgsi"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_jkea2"]
+
+[resource]
+script = ExtResource("1_jkea2")
+file = "res://assets/snd/reports/diaries/podcasts/life's report/report1.mp3"
+title = "report1"
+author = "Urie Wilson"
+date = "?-?-2020"
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

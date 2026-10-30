@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://dj8voc3nh1r3s"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_71v5c"]
+
+[resource]
+script = ExtResource("1_71v5c")
+file = "uid://b88rl2l3ws6ph"
+title = "Urie's Dug-Up Secrets"
+author = "Urie Wilson"
+date = "10-25-2026"
+desc = "This document tells of the many dug up secrets Urie found in his life, so far..."
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

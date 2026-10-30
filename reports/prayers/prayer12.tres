@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://bdi612j4k5iwo"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_vf26q"]
+
+[resource]
+script = ExtResource("1_vf26q")
+body = "Dear Most High,
+
+I rebuke every evil power and witchcraft working against me and my family members.
+
+I command that Angels of Yahuah remove our identities and names from every witchcraft monitoring list.
+
+Most High,
+
+Stop witchcraft using humans to attack me and my family.
+
+Dear Most High,
+
+Deliver me and my family members from any witchcraft and evil power.
+
+I pray in Mighty Yeshua's Name,
+
+I love you,
+
+Hallelujah!!!"
+title = "Prayer Against Witchcraft"
+author = "Urie Wilson, LovelyGodOfficial"
+date = "10-25-2026"
+desc = "A prayer against witchcraft"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

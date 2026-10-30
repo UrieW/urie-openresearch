@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://jjo3n65p32ky"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_wvrcu"]
+
+[resource]
+script = ExtResource("1_wvrcu")
+file = "uid://mofectyujakt"
+title = "report6"
+author = "Urie Wilson"
+date = "?-?-2025"
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

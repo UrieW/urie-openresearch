@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="TxtReportData" format=3 uid="uid://by6go1n67bpug"]
+
+[ext_resource type="Script" uid="uid://cg63qdjd6i4sb" path="res://scripts/base/reports/txt_report_data.gd" id="1_w7lko"]
+
+[resource]
+script = ExtResource("1_w7lko")
+body = "The Elohim is my Shepherd, I shall not want.
+
+He lets me lie down on the green meadows.
+He leads me beside the still waters.
+He restores my soul.
+He leads me down the path of righteousness, for His Name's Sake.
+
+Surely, as I walk through the valley in the shadow of death,
+I fear no one, for you are with me.
+You present a table in front of me, in the presence of my enemies.
+You anoint my head with oil, my cup overflows!
+
+Surely, goodness and love shall follow me throughout the rest of my days,
+And I shall live in the house of the Elohim forever.
+
+In mighty Yeshua's Name,
+
+I love you,
+
+Hallelujah!"
+title = "The Elohim's Shepherd"
+author = "Urie Wilson"
+date = "10-25-2026"
+desc = "The Elohim's Shepherd"
+metadata/_custom_type_script = "uid://cg63qdjd6i4sb"

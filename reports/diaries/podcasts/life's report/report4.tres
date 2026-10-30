@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://b0oxqaag7lf8y"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_7q1m2"]
+
+[resource]
+script = ExtResource("1_7q1m2")
+file = "uid://bhrvjre0fhhai"
+title = "The Many Saves of Urie Wilson"
+author = "Urie Wilson"
+date = "10-18-2026"
+desc = "The document tells of many of the most miraculous saves Urie has ever went through, by the Elohim."
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

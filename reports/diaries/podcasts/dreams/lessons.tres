@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PodcastReportData" format=3 uid="uid://dptl8fxwisyr7"]
+
+[ext_resource type="Script" uid="uid://dr5ws6yxdofts" path="res://scripts/base/reports/podcast_report_data.gd" id="1_vt3m4"]
+
+[resource]
+script = ExtResource("1_vt3m4")
+file = "uid://bnknbbphn2hqx"
+title = "Dream Lessons"
+author = "Urie Wilson"
+date = "10-25-26"
+desc = "This document gives all the dream lessons Urie has learned so far..."
+metadata/_custom_type_script = "uid://dr5ws6yxdofts"

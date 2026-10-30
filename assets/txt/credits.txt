@@ -1,0 +1,89 @@
+urie's open research credits
+by urie wilson
+
+staff
+-------
+
+executive producer
+---------------------
+urie wilson
+
+art director
+------
+urie wilson
+
+music director
+-------
+urie wilson
+
+lead programmer
+---------------
+urie wilson
+
+event director
+------------------
+urie wilson
+
+online voting designer
+-------------------
+urie wilson
+
+podcast report data by
+-----------------------
+urie wilson
+libreoffice
+notebook lm
+
+report data sources
+---------------------
+the Elohim
+all met enemy sources
+all met celeb sources
+all met criminal sources
+all met animal sources
+all met monster sources
+all met cryptid sources
+all met alien sources
+all met Prophet sources
+all met supernatural sources
+all met government sources
+all met patron sources
+all met family sources
+all met friend sources
+all met contact sources
+all met history sources
+all met media sources
+all met product sources
+
+art by
+-----------
+urie wilson
+akar icons
+charm
+ant design
+fluent
+iconify
+
+music by
+----------
+urie wilson
+yubatake
+
+sounds by
+-----------
+urie wilson
+independent nu ljudbank
+AD Sounds
+
+made with
+-----------
+godot
+inkscape
+notebook lm
+ubuntu
+gnome text editor
+lmms
+opengameart.org
+libreoffice
+synfig
+

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c7adxtkuqioqq"]
+
+[ext_resource type="Material" uid="uid://cai7xxioiagn6" path="res://shaders/app_bkg_pt.tres" id="1_2nmte"]
+[ext_resource type="Script" uid="uid://b5x5xnhp6shbg" path="res://scripts/app/main/main.gd" id="1_r51t7"]
+[ext_resource type="Texture2D" uid="uid://brubd3lhfryl0" path="res://assets/gfx/gui/backgrounds/theme1.png" id="2_r51t7"]
+[ext_resource type="Script" uid="uid://brd44l1h013s5" path="res://scripts/base/ui/bkg/texture_rect.gd" id="3_b3uu4"]
+
+[node name="Main" type="Node2D" unique_id=1716179303]
+script = ExtResource("1_r51t7")
+
+[node name="sbkg" type="TextureRect" parent="." unique_id=769952466]
+texture_filter = 1
+material = ExtResource("1_2nmte")
+custom_maximum_size = Vector2(640, 360)
+offset_right = 640.0
+offset_bottom = 350.0
+size_flags_horizontal = 2
+size_flags_vertical = 10
+texture = ExtResource("2_r51t7")
+stretch_mode = 1
+script = ExtResource("3_b3uu4")
