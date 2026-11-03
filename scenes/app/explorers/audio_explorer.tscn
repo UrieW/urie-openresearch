@@ -58,20 +58,20 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.041
 anchor_top = 0.18
-anchor_right = 0.21400002
+anchor_right = 0.29200003
 anchor_bottom = 0.8
 offset_left = -0.24000168
-offset_right = 0.039993286
+offset_right = -49.88002
 
 [node name="dbtn" type="Button" parent="title/filctrls" unique_id=349296210]
 texture_filter = 1
 layout_mode = 2
-text = "!"
+text = "  !  "
 
 [node name="tbtn" type="Button" parent="title/filctrls" unique_id=223408530]
 texture_filter = 1
 layout_mode = 2
-text = "T"
+text = "  T  "
 
 [node name="closebtn" type="Button" parent="title/filctrls" unique_id=64836342]
 texture_filter = 1
@@ -81,7 +81,7 @@ text = "Close"
 [node name="vbtn" type="Button" parent="title/filctrls" unique_id=478778081]
 texture_filter = 1
 layout_mode = 2
-text = "V"
+text = "  V  "
 
 [node name="explorer" type="Panel" parent="." unique_id=1962162731]
 layout_mode = 1
@@ -98,12 +98,14 @@ theme_override_styles/panel = ExtResource("1_0hf8j")
 [node name="playpause" type="Button" parent="explorer" unique_id=1532090951]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.28
-anchor_bottom = 0.947
-offset_left = 275.0
-offset_top = 60.0
-offset_right = 172.8
-offset_bottom = -59.022003
+anchor_left = 0.43
+anchor_top = 0.26500002
+anchor_right = 0.55
+anchor_bottom = 0.68600005
+offset_left = -0.2000122
+offset_top = 0.109996796
+offset_bottom = -0.036010742
+focus_mode = 0
 icon = ExtResource("3_7gg5r")
 flat = true
 expand_icon = true
@@ -146,6 +148,7 @@ offset_left = -0.0950017
 offset_top = 0.004000187
 offset_right = 1.0
 offset_bottom = 1.0
+focus_mode = 0
 theme_override_styles/slider = ExtResource("4_0jdy3")
 
 [node name="iteminfo" type="Panel" parent="." unique_id=1443439172]

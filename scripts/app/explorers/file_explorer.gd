@@ -10,6 +10,7 @@ const FolderItemButtonPreload = preload("res://scenes/ui/buttons/navigation/item
 @onready var item_info: RichTextLabel = $iteminfo/info
 @onready var sub_info: RichTextLabel = $subinfo1/iteminfo
 
+@onready var navbox: HBoxContainer = $explorer/navibox
 @onready var ae_btn: Button = $explorer/navibox/ae
 @onready var d_btn: Button = $explorer/navibox/dbtn
 @onready var fe_btn: Button = $explorer/navibox/fexit
@@ -35,6 +36,7 @@ func _ready()->void:
 	nxt_btn.pressed.connect(next_page)
 #	ea_btn.pressed.connect(exit_explorer)
 	
+	
 func set_items(new_items: Array) -> void:
 	if !focused:
 		return
@@ -44,7 +46,90 @@ func set_items(new_items: Array) -> void:
 	current_page = clampi(current_page, 0, max(0, total_pages - 1))
 	page_label.text = str(current_page + 1)
 	show_page(current_page)
+	grid_focus_first_item.call_deferred()
 	
+func grid_focus_first_item():
+	if file_grid.get_child_count() > 0:
+		var first_child = file_grid.get_child(0)
+		
+		# If your child is a custom Scene container holding a button:
+		if first_child.has_node("exploreitem"):
+			first_child.get_node("exploreitem").grab_focus()
+			
+		# If the child itself is the Button node:
+		elif first_child is Button:
+			first_child.grab_focus()
+			
+func hbox_focus_first_item():
+	if navbox.get_child_count() > 0:
+		var first_child = navbox.get_child(0)
+		
+		# If your child is a custom Scene container holding a button:
+		if first_child.has_node("ae"):
+			first_child.get_node("ae").grab_focus()
+			
+		# If the child itself is the Button node:
+		elif first_child is Button:
+			first_child.grab_focus()
+	
+func focus_grid_index(index: int):
+	if index < file_grid.get_child_count():
+		var target_button = file_grid.get_child(index) as Button
+		if target_button:
+			target_button.grab_focus.call_deferred()
+			
+func focus_navbox_index(index: int):
+	if index < navbox.get_child_count():
+		if navbox.get_child(index) is Label:
+			return
+		var target_button = navbox.get_child(index) as Button
+		if target_button:
+			target_button.grab_focus.call_deferred()
+			
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_up"):
+		for i in file_grid.get_children():
+			if file_grid.get_child_count() > 6:
+				file_grid.get_child(7).grab_focus.call_deferred()
+			elif file_grid.get_child_count() > 12:
+				file_grid.get_child(13).grab_focus.call_deferred()
+			else:
+				navbox.get_child(0).grab_focus.call_deferred()
+	
+	if event.is_action_pressed("ui_down"):
+		for i in file_grid.get_children():
+			if file_grid.get_child_count() > 6:
+				file_grid.get_child(1).grab_focus.call_deferred()
+			elif file_grid.get_child_count() > 12:
+				file_grid.get_child(6).grab_focus.call_deferred()
+			else:
+				navbox.get_child(0).grab_focus.call_deferred()
+				
+	if event.is_action_pressed("ui_left"):
+		for i in file_grid.get_children():
+			if i.get_index() > 0:
+				file_grid.get_child(i.get_index() -1).grab_focus.call_deferred()
+			else:
+				navbox.get_child(navbox.get_child_count()-1).grab_focus.call_deferred()
+				
+	if event.is_action_pressed("ui_right"):
+		for i in file_grid.get_children():
+			if i.get_index() < file_grid.get_child_count()-1:
+				file_grid.get_child(i.get_index() +1).grab_focus.call_deferred()
+			else:
+				navbox.get_child(0).grab_focus.call_deferred()
+	
+	if event.is_action_pressed("ui_accept"):
+		for i in file_grid.get_children():
+			if i.has_focus():
+				i.emit_signal("pressed")
+		for i in navbox.get_children():
+			if i.has_focus():
+				i.emit_signal("pressed")
+				
+#	if event.is_action_pressed("ui_cancel"):
+#		exit_explorer()
+
 func set_items_by_path(path_str: String) -> void:
 	if !focused:
 		return
@@ -175,14 +260,12 @@ func show_disclaimer()->void:
 #	focused = false
 
 func exit_folder()->void:
-	if !focused:
+	if Globals.current_dir == "res://reports" or !focused:
 		return
-		
-	if Globals.current_dir == "res://reports/" or !focused:
-		return
-		
-	Globals.current_dir = Globals.current_dir.get_base_dir() 
-	set_items_by_path.call_deferred(Globals.current_dir)
+	
+	else:	
+		Globals.current_dir = Globals.current_dir.get_base_dir() 
+		set_items_by_path.call_deferred(Globals.current_dir)
 	
 func enter_folder(file_name: String)->void:
 	if !focused:

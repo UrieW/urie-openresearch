@@ -5,7 +5,7 @@ extends Control
 @onready var s_text2: RichTextLabel = $subinfo2/subtext2
 
 @onready var p_label: Label = $controls/pgctrls/page
-
+@onready var pg_ctrls: HBoxContainer = $controls/pgctrls
 @onready var dbtn:Button = $controls/pgctrls/dbtn
 @onready var tbtn:Button = $controls/pgctrls/tbtn
 @onready var back_btn:Button = $controls/pgctrls/back
@@ -51,6 +51,43 @@ func _ready() -> void:
 #	vote_btn.pressed.connect(show_voting_page)
 	exit_btn.pressed.connect(close_doc)
 	
+	next_btn.grab_focus()
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_down"):
+		if s_text1.has_focus():
+			s_text2.grab_focus()
+	
+	if event.is_action_pressed("ui_up"):
+		if s_text2.has_focus():
+			s_text1.grab_focus()
+				
+	# Horizontal Slider Adjustment Controls
+	
+	if event.is_action_pressed("ui_left"):
+		for i in pg_ctrls.get_children():
+			if i.has_focus():
+				if i.get_index() > 0:
+					pg_ctrls.get_child(i.get_index() -1).grab_focus()
+				else:
+					s_text1.grab_focus()
+								
+	if event.is_action_pressed("ui_right"):
+		for i in pg_ctrls.get_children():
+			if i.has_focus():
+				if i.get_index() > pg_ctrls.get_child_count()-1:
+					pg_ctrls.get_child(i.get_index() +1).grab_focus()
+				else:
+					s_text1.grab_focus()
+					
+	if event.is_action_pressed("ui_accept"):
+		for i in pg_ctrls.get_children():
+			if i.has_focus():
+				i.emit_signal("pressed")
+				
+	if event.is_action_pressed("ui_cancel"):
+		close_doc()
+		
 func _on_timer_timeout() -> void:
 	if !focused:
 		return
@@ -66,7 +103,7 @@ func next_page():
 		return
 		
 	page_count += 1
-	body.text = b_text[page_count]
+	body.text = b_text[page_count-1]
 	p_label.text = str(page_count)
 	
 func prev_page():
@@ -77,7 +114,7 @@ func prev_page():
 		return
 		
 	page_count -= 1
-	body.text = b_text[page_count]
+	body.text = b_text[page_count-1]
 	p_label.text = str(page_count)
 	
 func show_disclaimer():
