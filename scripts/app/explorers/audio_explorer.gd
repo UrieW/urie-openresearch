@@ -52,7 +52,7 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_down"):
 		if play_pause_btn.has_focus():
-			time_slider.grab_focus()
+			time_slider.grab_focus.call_deferred()
 		for i in f_ctrls.get_children():
 			if i.has_focus():
 				play_pause_btn.grab_focus.call_deferred()
@@ -90,13 +90,6 @@ func _unhandled_input(event: InputEvent) -> void:
 					f_ctrls.get_child(i.get_index() +1).grab_focus.call_deferred()
 				else:
 					play_pause_btn.grab_focus.call_deferred()
-					
-	if event.is_action_pressed("ui_accept"):
-		if play_pause_btn.has_focus():
-			_on_play_pause_pressed()
-		for i in f_ctrls.get_children():
-			if i.has_focus():
-				i.emit_signal("pressed")
 				
 	if event.is_action_pressed("ui_cancel"):
 		close_doc()

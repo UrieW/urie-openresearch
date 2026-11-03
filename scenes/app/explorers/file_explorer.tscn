@@ -120,6 +120,7 @@ offset_top = -0.043001175
 offset_right = 0.099975586
 offset_bottom = 0.041992188
 text = "Info"
+scroll_active = false
 
 [node name="subinfo1" type="Panel" parent="." unique_id=1364928745]
 layout_mode = 1
@@ -145,3 +146,4 @@ offset_right = -0.042007446
 offset_bottom = -0.08001709
 grow_horizontal = 2
 text = "item info"
+scroll_active = false

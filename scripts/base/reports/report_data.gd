@@ -5,3 +5,5 @@ class_name ReportData
 @export var author: String
 @export var date: String
 @export var desc: String
+var yvotes: int
+var nvotes: int

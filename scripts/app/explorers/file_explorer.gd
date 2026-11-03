@@ -114,18 +114,10 @@ func _unhandled_input(event: InputEvent) -> void:
 				
 	if event.is_action_pressed("ui_right"):
 		for i in file_grid.get_children():
-			if i.get_index() < file_grid.get_child_count()-1:
+			if i.get_index() < file_grid.get_child_count() - 1:
 				file_grid.get_child(i.get_index() +1).grab_focus.call_deferred()
 			else:
 				navbox.get_child(0).grab_focus.call_deferred()
-	
-	if event.is_action_pressed("ui_accept"):
-		for i in file_grid.get_children():
-			if i.has_focus():
-				i.emit_signal("pressed")
-		for i in navbox.get_children():
-			if i.has_focus():
-				i.emit_signal("pressed")
 				
 #	if event.is_action_pressed("ui_cancel"):
 #		exit_explorer()

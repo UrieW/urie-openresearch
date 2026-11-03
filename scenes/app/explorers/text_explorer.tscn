@@ -97,9 +97,9 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.684
 anchor_right = 1.0
-anchor_bottom = 0.42200002
+anchor_bottom = 0.68600005
 offset_left = 0.23999023
-offset_bottom = 0.07998657
+offset_bottom = 0.039978027
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("1_u1tf7")
@@ -109,19 +109,20 @@ texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.069000006
-anchor_top = 0.112
-anchor_right = 0.92100006
-anchor_bottom = 0.882
+anchor_top = 0.049000002
+anchor_right = 0.94100004
+anchor_bottom = 0.943
 offset_left = 0.061998367
-offset_top = -0.024000168
-offset_right = -0.042007446
-offset_bottom = -0.06401062
+offset_top = -0.10300064
+offset_right = -0.08201599
+offset_bottom = 0.07899475
 focus_mode = 0
 text = "Title:
 titles
 
 Author:
 authors"
+scroll_active = false
 
 [node name="subinfo2" type="Panel" parent="." unique_id=1867458799]
 layout_mode = 1
@@ -131,7 +132,7 @@ anchor_top = 0.40800002
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 0.23999023
-offset_top = 0.11999512
+offset_top = 94.119995
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("1_u1tf7")
@@ -140,21 +141,16 @@ theme_override_styles/panel = ExtResource("1_u1tf7")
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.08400001
-anchor_top = 0.085
-anchor_right = 0.906
-anchor_bottom = 0.90800005
-offset_left = 0.031999588
-offset_top = -0.10499191
-offset_right = -0.012008667
-offset_bottom = 0.6299896
+anchor_left = 0.059000004
+anchor_top = 0.11800001
+anchor_right = 0.94100004
+anchor_bottom = 0.9110001
+offset_left = 0.081998825
+offset_top = -0.042012215
+offset_right = -0.08201599
+offset_bottom = -2.0430145
 focus_mode = 0
-text = "Words:
-wordnum
-Lines:
-linenum
-Paragraphs:
-paranum
-Sentences:
-snum
-"
+text = "Votes:
+Y: ynum
+N: nnum"
+scroll_active = false

@@ -8,40 +8,90 @@ by urie wilson
 9/12 - created game project
 9/16 - created changelog, credits
 9/20 - added reportdata class
-9/21 - extended reportdata class twice, made txtreportdata and podcastreportdata
+9/21 - extended reportdata class twice, made 
+txtreportdata and podcastreportdata
 9/22 - added and nearly emptied reports folder
-9/24 - added fnt, gfx and snd asset folders, added background themes to main
-scene, moved main scene to app folder in scenes, added shaders, explorer scenes
-9/25 - fixed file explorer buttons, use hboxcontainer for buttons, completed audio player
-9/26 - added sound, document and folder buttons, fixed file explorer windows,
-added folder icon, completed all file explorers, added file/folder icon template,
-linked file/folder icon and file explorer to scripts
-9/28 - perfected txtreportdata class, need to wield globals, make strict 
-directory globals file to make full use of explorers...
-9/30 - added reportslot node to exploreitem template button, related code to
-button, fixed most of fileexplorer, perfected, added dirglobals, completed text explorer
+9/24 - added fnt, gfx and snd asset folders, added 
+background themes to main
+scene, moved main scene to app folder in scenes, added 
+shaders, explorer scenes
+9/25 - fixed file explorer buttons, use hboxcontainer for 
+buttons, completed audio player
+9/26 - added sound, document and folder buttons, fixed file 
+explorer windows, added folder icon, completed all file 
+explorers, added file/folder icon template, linked 
+file/folder icon and file explorer to scripts
+9/28 - perfected txtreportdata class, need to wield globals, 
+make strict directory globals file to make full use of 
+explorers...
+9/30 - added reportslot node to exploreitem template button, 
+related code to button, fixed most of fileexplorer, perfected, 
+added dirglobals, completed text explorer
 
 -october:
 --------------
 10/1 - added october emergency reports folder, updated items list
-10/2 - completed exit/enter_folder's set items commands, with help from Sarcen, from godot discord server, added new buttons, file explorer features, all explorers complete, except actual button input, need to fill in blanks
-10/3 - added selectrec to all explorer buttons, renamed selectrec to sr, made
-reg_button script
-10/4 - turn exploreitem, script into  button, put file explorer's filegrid container in filemargins, successfully compiled file explorer scene, found missing file explorer's enter/exit_folder commands, added enter_file command to such, clues of icon problem in _ready in such scene remains, in droves
-10/7 - thanks to blackshift, haledire, heraldoffire, fixed late file explorer child declare on use, corrected 2 errors, fixed exploreitem/folder_icon_button, added disclaimer, title, credits
-10/8 - created disclaimer, inkscape, made credits, completed all but richtextlabel text and audio stream player in credits
-10/9 - renamed texturerect in main scene to sbkg, spread its background transit func to all explorers, added main scene script for later, moved all explorer root scripts to scripts/apps, replaced all audiostreamplayer2ds with their respective root classes, updated credits.txt
-10/10 - pasted credits, fixed credits code, completed credits scene, fixed and nearly completed text explorer, failed to get text explorer target specs data
-10/11 - replace play button in audio explorer, removed all select colorrects from all buttons, made voting/universal check control scenes, completed all explorers, fixed all formatting of audio explorer, txtreportdata and related actual .tres source bodies, may need more formatting/txtpurifier tool may need to be upgraded...fixed foldericonbuttons, fixed audio explorer time format yellow flags, fixed close/exit explorer code for all explorers, remembered to throw all spliced code back at their origins to get exact results, which fixed text explorer removed scroll active from target text richtextlabel in text explorer
+10/2 - completed exit/enter_folder's set items commands, with 
+help from Sarcen, from godot discord server, added new buttons, 
+file explorer features, all explorers complete, except actual 
+button input, need to fill in blanks
+10/3 - added selectrec to all explorer buttons, renamed selectrec 
+to sr, made reg_button script
+10/4 - turn exploreitem, script into  button, put file explorer's 
+filegrid container in filemargins, successfully compiled file 
+explorer scene, found missing file explorer's enter/exit_folder 
+commands, added enter_file command to such, clues of icon problem 
+in _ready in such scene remains, in droves
+10/7 - thanks to blackshift, haledire, heraldoffire, fixed late file 
+explorer child declare on use, corrected 2 errors, fixed 
+exploreitem/folder_icon_button, added disclaimer, title, credits
+10/8 - created disclaimer, inkscape, made credits, completed all but 
+richtextlabel text and audio stream player in credits
+10/9 - renamed texturerect in main scene to sbkg, spread its 
+background transit func to all explorers, added main scene script 
+for later, moved all explorer root scripts to scripts/apps, replaced 
+all audiostreamplayer2ds with their respective root classes, updated 
+credits.txt
+10/10 - pasted credits, fixed credits code, completed credits scene, 
+fixed and nearly completed text explorer, failed to get text explorer 
+target specs data
+10/11 - replace play button in audio explorer, removed all select 
+colorrects from all buttons, made voting/universal check control 
+scenes, completed all explorers, fixed all formatting of audio explorer, 
+txtreportdata and related actual .tres source bodies, may need more 
+formatting/txtpurifier tool may need to be upgraded...fixed 
+foldericonbuttons, fixed audio explorer time format yellow flags, fixed 
+close/exit explorer code for all explorers, remembered to throw all 
+spliced code back 
+at their origins to get exact results, which fixed text explorer removed 
+scroll active from target text richtextlabel in text explorer
 10/13 - made batchconverter.gd to speed up document uploading time/may need 
-file/folder tweaks, as i forgot to add functions to controls, which might take some mastery...
-10/14 - Fixed all exit_file/exit_folder funcs for all explorers, thanks to superfishy, who gave hints on speeding up document upload
-10/19 - Converted some documents and added them to the project, now there are fewer folders covered as txtreportdata, added fallback code to file explorer's exit_folder func, corrected some podcastreportdata
-10/20 - almost finished uploading all emergency report podcastreportdata as tres files, as happy moments and saves fully got the treatment, repurposed their original project tres report folders, as I added all related files
-10/21 - EVEN MORE files got released in project, project is now more audio based than text based, split between audio diaries and personal studies, as project is NOW CLOSED, as Prophets sent Yahuah's Divine Instructions to wrap it up, focus on main projects...
-10/23 -  BIG OVERHAUL!!!!!! Bound all explorer controls to their triggers, fixed all explorer code SEAMLESSLY, added lots of explorer controls to the project, after finding out, it's this app or my life, thanks to the state of the world, will document soon
-10/24 - fixed file explorer code, have to wait until sabbath's end, after SINFULLY coding overnight, to make addon scenes, will start with button triggers first, after haberdashing the last parts of my report folder with audio versions, before turning the rest into text reports
-10/25 - COLLECTION MISSION COMPLETE, ALL reports are fully loaded AND ADDED, may have to do a little pruning of code for the explorers, as well as add some voting specs
+file/folder tweaks, as i forgot to add functions to controls, which might 
+take some mastery...
+10/14 - Fixed all exit_file/exit_folder funcs for all explorers, thanks to 
+superfishy, who gave hints on speeding up document upload
+10/19 - Converted some documents and added them to the project, now there 
+are fewer folders covered as txtreportdata, added fallback code to file 
+explorer's exit_folder func, corrected some podcastreportdata
+10/20 - almost finished uploading all emergency report podcastreportdata 
+as tres files, as happy moments and saves fully got the treatment, 
+repurposed their original project tres report folders, as I added all 
+related files
+10/21 - EVEN MORE files got released in project, project is now more audio 
+based than text based, split between audio diaries and personal studies, 
+as project is NOW CLOSED, as Prophets sent Yahuah's Divine 
+Instructions to wrap it up, focus on main projects...
+10/23 -  BIG OVERHAUL!!!!!! Bound all explorer controls to their triggers, 
+fixed all explorer code SEAMLESSLY, added lots of explorer controls to the
+project, after finding out, it's this app or my life, thanks to the 
+state of the world, will document soon
+10/24 - fixed file explorer code, have to wait until sabbath's end, after 
+SINFULLY coding overnight, to make addon scenes, will start with button 
+triggers first, after haberdashing the last parts of my report folder 
+with audio versions, before turning the rest into text reports
+10/25 - COLLECTION MISSION COMPLETE, ALL reports are fully loaded AND ADDED,
+may have to do a little pruning of code for the explorers, as well as add 
+some voting specs
 10/30 - uploaded project to git
 
 november:
@@ -54,4 +104,15 @@ report explorer target's focus
 11/2 - added all controls for all explorers, except disclaimer, appevents,
 all tutorials and voting, commented out exit_explorer command for 
 unhandled_input
-11/3 - added all call_deferred to controls, found bug, where using next and previous buttons skip pages in text_explorer,
+11/3 - added all call_deferred to controls, found bug, where using next and 
+previous buttons skip pages in text_explorer and fixed it among all
+explorers fixed several incorrect info counters in txtreportdata format, as
+sentences, and words became the only correct ones, only lines and paragraphs
+need to count right...
+11/3 - Hallelujah!!!!! removed make_lines, make_words, make_sentences and
+make_paragraphs from txtreportdata, and removed all 
+line/paragraph/word/sentence statistics from entire project, added v*****
+variables to reportdata, you will see...
+11/3 - rearranged text_explorer text boxes and fixed the explorer's code,
+but can't find the out of focus bug, will get to it, soon, as it's 
+maybe why load screens are invented...

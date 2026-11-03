@@ -36,10 +36,8 @@ func _ready() -> void:
 	s1text = s1text.replace("titles", c_report.title)
 	s1text = s1text.replace("authors", c_report.author)
 	
-	s2text = s2text.replace("wordnum", str(c_report.words))
-	s2text = s2text.replace("linenum", str(c_report.lines))
-	s2text = s2text.replace("paranum", str(c_report.paragraphs))
-	s2text = s2text.replace("snum", str(c_report.sentences))
+	s2text = s2text.replace("ynum", str(c_report.yvotes))
+	s2text = s2text.replace("nnum", str(c_report.nvotes))
 	
 	s_text1.text = s1text
 	s_text2.text = s2text
@@ -51,39 +49,24 @@ func _ready() -> void:
 #	vote_btn.pressed.connect(show_voting_page)
 	exit_btn.pressed.connect(close_doc)
 	
-	next_btn.grab_focus()
+	next_btn.grab_focus.call_deferred()
 	
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_down"):
-		if s_text1.has_focus():
-			s_text2.grab_focus()
-	
-	if event.is_action_pressed("ui_up"):
-		if s_text2.has_focus():
-			s_text1.grab_focus()
-				
-	# Horizontal Slider Adjustment Controls
-	
 	if event.is_action_pressed("ui_left"):
 		for i in pg_ctrls.get_children():
 			if i.has_focus():
 				if i.get_index() > 0:
-					pg_ctrls.get_child(i.get_index() -1).grab_focus()
+					pg_ctrls.get_child(i.get_index() - 1).grab_focus.call_deferred()
 				else:
-					s_text1.grab_focus()
+					pg_ctrls.get_child(pg_ctrls.get_child_count() - 1).grab_focus.call_deferred()
 								
 	if event.is_action_pressed("ui_right"):
 		for i in pg_ctrls.get_children():
 			if i.has_focus():
-				if i.get_index() > pg_ctrls.get_child_count()-1:
-					pg_ctrls.get_child(i.get_index() +1).grab_focus()
+				if i.get_index() > pg_ctrls.get_child_count() - 1:
+					pg_ctrls.get_child(i.get_index() + 1).grab_focus.call_deferred()
 				else:
-					s_text1.grab_focus()
-					
-	if event.is_action_pressed("ui_accept"):
-		for i in pg_ctrls.get_children():
-			if i.has_focus():
-				i.emit_signal("pressed")
+					pg_ctrls.get_child(0).grab_focus.call_deferred()
 				
 	if event.is_action_pressed("ui_cancel"):
 		close_doc()

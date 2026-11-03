@@ -38,24 +38,17 @@ func equip_report_info() -> void:
 			\
 			"
 			#now, for the specs...
-			s2text = "Words:\
-			wordnum\
-			Lines:\
-			linenum\
-			Paragraphs:\
-			paranum\
-			Sentences:\
-			snum"
+			s2text = "Votes:\
+			Y: ynum\
+			N: nnum"
 			
 			#splice first var to give credit
 			s1text = s1text.replace("titles", report.title)
 			s1text = s1text.replace("authors", report.author)
 			
 			#then for the specs...
-			s2text = s2text.replace("wordnum", str(report.words))
-			s2text = s2text.replace("linenum", str(report.lines))
-			s2text = s2text.replace("paranum", str(report.paragraphs))
-			s2text = s2text.replace("snum", str(report.sentences))
+			s2text = s2text.replace("ynum", str(report.yvotes))
+			s2text = s2text.replace("nnum", str(report.nvotes))
 		else:
 			#if not a text report, i will do this to the same box
 			#targets..
@@ -71,6 +64,8 @@ func equip_report_info() -> void:
 			#splice first var to give credit
 			s1text = s1text.replace("titles", report.title)
 			s1text = s1text.replace("authors", report.author)
+			s2text = s2text.replace("ynum", str(report.yvotes))
+			s2text = s2text.replace("nnum", str(report.nvotes))
 		
 		#fuse text together
 		s1text += s2text
