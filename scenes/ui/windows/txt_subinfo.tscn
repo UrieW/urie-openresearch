@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://46wjay2vvumn"]
+
+[node name="textrows" type="VBoxContainer" unique_id=1822194318]
+anchors_preset = -1
+anchor_left = 0.059000004
+anchor_top = 0.036000002
+anchor_right = 0.94100004
+anchor_bottom = 0.96400005
+offset_left = 0.081998825
+offset_top = 0.03999901
+offset_right = -0.08201599
+offset_bottom = -0.040008545
+grow_horizontal = 2
+
+[node name="tilabel" type="Label" parent="." unique_id=378145644]
+layout_mode = 2
+text = "Title:"
+
+[node name="titles" type="Label" parent="." unique_id=1436214545]
+custom_maximum_size = Vector2(175, 120)
+layout_mode = 2
+text = "titles"
+autowrap_mode = 3
+
+[node name="authlabel" type="Label" parent="." unique_id=1732173655]
+layout_mode = 2
+text = "Author:"
+
+[node name="authors" type="Label" parent="." unique_id=1246249514]
+custom_maximum_size = Vector2(175, 120)
+layout_mode = 2
+text = "authors"
+autowrap_mode = 3
+
+[node name="datelabel" type="Label" parent="." unique_id=1289159441]
+layout_mode = 2
+text = "Date:"
+
+[node name="datetext" type="Label" parent="." unique_id=230739968]
+layout_mode = 2
+text = "dnum"

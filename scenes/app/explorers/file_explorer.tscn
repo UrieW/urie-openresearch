@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://det80om7ugits" path="res://scripts/app/explorers/file_explorer.gd" id="1_fj7rl"]
 [ext_resource type="StyleBox" uid="uid://dov5ojj1ufpxr" path="res://shaders/windowstyle1.tres" id="1_i8734"]
 [ext_resource type="StyleBox" uid="uid://cpwrhl42uw007" path="res://shaders/windowstyle2.tres" id="1_lx5on"]
+[ext_resource type="PackedScene" uid="uid://brknac0hhad0t" path="res://scenes/ui/windows/txt_subinfo2.tscn" id="4_uji8x"]
 
 [node name="fileexplorer" type="Control" unique_id=1777768152]
 layout_mode = 3
@@ -133,17 +134,6 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = ExtResource("1_i8734")
 
-[node name="iteminfo" type="RichTextLabel" parent="subinfo1" unique_id=1044744483]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.074
-anchor_top = 0.042000003
-anchor_right = 0.92100006
-anchor_bottom = 0.95300007
-offset_left = 0.052000046
-offset_top = -0.12000084
-offset_right = -0.042007446
-offset_bottom = -0.08001709
-grow_horizontal = 2
-text = "item info"
-scroll_active = false
+[node name="textrows2" parent="subinfo1" unique_id=1358912823 instance=ExtResource("4_uji8x")]
+layout_mode = 0
+anchors_preset = 0

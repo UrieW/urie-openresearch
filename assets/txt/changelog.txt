@@ -116,3 +116,10 @@ variables to reportdata, you will see...
 11/3 - rearranged text_explorer text boxes and fixed the explorer's code,
 but can't find the out of focus bug, will get to it, soon, as it's 
 maybe why load screens are invented...
+11/5 - thanks to what i learned when coding cori-dma, i found out that all
+this code's gonna be alright...removed a panel and its labels from 
+text_explorer, used subinfo panel and replaced its label with a
+vboxcontainer of several labels as the info, did the same for 'item info'
+for file_explorer, turned both vboxcontainers into external scenes and 
+found a new way to display reportdata, which i now know what to do about
+all the code...snickering...
