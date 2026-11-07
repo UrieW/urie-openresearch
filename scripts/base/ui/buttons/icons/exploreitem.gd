@@ -2,8 +2,6 @@ extends Button
 
 @onready var report_slot: Node = $reportslot
 @onready var itemnum:Label = $itemnum
-var s1text: String = ""
-var s2text: String = ""
 var s3text: String = ""
 
 var folder_icon = load("res://assets/gfx/gui/icons/akar-icons--folder/akar-icons--folder.png")
@@ -28,47 +26,6 @@ func equip_report_info() -> void:
 		return
 	else:
 		var report = load(report_slot.report)
-		if  report is TxtReportData:
-			#text vars fill with dummy text, with templates
-			#the name and creators
-			s1text ="Title:\
-			titles\
-			Author:\
-			authors\
-			\
-			"
-			#now, for the specs...
-			s2text = "Votes:\
-			Y: ynum\
-			N: nnum"
-			
-			#splice first var to give credit
-			s1text = s1text.replace("titles", report.title)
-			s1text = s1text.replace("authors", report.author)
-			
-			#then for the specs...
-			s2text = s2text.replace("ynum", str(report.yvotes))
-			s2text = s2text.replace("nnum", str(report.nvotes))
-		else:
-			#if not a text report, i will do this to the same box
-			#targets..
-			s1text = "Title:\
-			titles\
-			Author:\
-			authors\
-			\
-			"
-			s2text = "Length:\
-			  " + report.equip_time()
-			
-			#splice first var to give credit
-			s1text = s1text.replace("titles", report.title)
-			s1text = s1text.replace("authors", report.author)
-			s2text = s2text.replace("ynum", str(report.yvotes))
-			s2text = s2text.replace("nnum", str(report.nvotes))
-		
-		#fuse text together
-		s1text += s2text
 		s3text = report.desc
 		
 func equip_folder()->void:

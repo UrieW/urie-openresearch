@@ -1,8 +1,6 @@
 extends Control
 
 @onready var body: RichTextLabel = $explorer/text
-@onready var s_text1: RichTextLabel = $subinfo/subtext
-@onready var s_text2: RichTextLabel = $subinfo2/subtext2
 
 @onready var p_label: Label = $controls/pgctrls/page
 @onready var pg_ctrls: HBoxContainer = $controls/pgctrls
@@ -30,17 +28,7 @@ func _ready() -> void:
 	page_count = 1
 	p_label.text = str(page_count)
 	
-	var s1text: String = s_text1.text
-	var s2text: String = s_text2.text
-	
-	s1text = s1text.replace("titles", c_report.title)
-	s1text = s1text.replace("authors", c_report.author)
-	
-	s2text = s2text.replace("ynum", str(c_report.yvotes))
-	s2text = s2text.replace("nnum", str(c_report.nvotes))
-	
-	s_text1.text = s1text
-	s_text2.text = s2text
+	$subinfo/textrows.show_report_info(c_report)
 	
 #	d_btn.pressed.connect(show_disclaimer)
 #	t_btn.pressed.connect(show_tutorial)

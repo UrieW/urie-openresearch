@@ -8,7 +8,7 @@ const FolderItemButtonPreload = preload("res://scenes/ui/buttons/navigation/item
 @onready var page_label: Label = $explorer/navibox/pagelabel
 
 @onready var item_info: RichTextLabel = $iteminfo/info
-@onready var sub_info: RichTextLabel = $subinfo1/iteminfo
+@onready var sub_info: VBoxContainer = $subinfo1/textrows2
 
 @onready var navbox: HBoxContainer = $explorer/navibox
 @onready var ae_btn: Button = $explorer/navibox/ae
@@ -156,6 +156,12 @@ func set_items_by_path(path_str: String) -> void:
 		
 	dir.list_dir_end()
 	
+	# --- SORT NUMERICALLY (NATURAL ORDER) HERE ---
+	result.sort_custom(func(a: String, b: String):
+		# naturalnocasecmp_to returns -1 if 'a' should come before 'b'
+		return a.naturalnocasecmp_to(b) < 0
+	)
+	
 	# Push the newly populated array to set_items
 	set_items(result)
 
@@ -200,7 +206,18 @@ func show_report_info(target:Button)->void:
 		return
 		
 	item_info.text = target.s3text
-	sub_info.text = target.s1text
+	var report = target.get_node("reportslot").report
+	
+	if DirAccess.dir_exists_absolute(report):
+		item_info.text = target.s3text
+		return
+	
+	var report_instance = load(report)
+	if report_instance is ReportData:
+		sub_info.show()
+		if report_instance is TxtReportData:
+			report_instance.make_pages(report_instance.body)
+		sub_info.show_report_info(report_instance)
 		
 func erase_report_info(target:Button)->void:
 	if !focused:
@@ -208,7 +225,8 @@ func erase_report_info(target:Button)->void:
 		
 	if target.focus_exited:
 		item_info.text = ""
-		sub_info.text = ""
+		sub_info.hide_report_info()
+		sub_info.hide()
 		
 func next_page() -> void:
 	if !focused:

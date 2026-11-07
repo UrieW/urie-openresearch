@@ -135,5 +135,14 @@ grow_vertical = 2
 theme_override_styles/panel = ExtResource("1_i8734")
 
 [node name="textrows2" parent="subinfo1" unique_id=1358912823 instance=ExtResource("4_uji8x")]
-layout_mode = 0
-anchors_preset = 0
+visible = false
+layout_mode = 1
+anchor_left = 0.074
+anchor_top = 0.05
+anchor_right = 0.37600002
+anchor_bottom = 0.63900006
+offset_left = 0.052000046
+offset_top = 0.0
+offset_right = 0.04799652
+offset_bottom = -0.040023804
+grow_horizontal = 1

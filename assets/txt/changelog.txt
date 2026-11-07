@@ -123,3 +123,16 @@ vboxcontainer of several labels as the info, did the same for 'item info'
 for file_explorer, turned both vboxcontainers into external scenes and 
 found a new way to display reportdata, which i now know what to do about
 all the code...snickering...
+11/6 - reformatted all explorer code having labels, fixed
+vboxcontainers, reformatted exploreitem code having to do with reports,
+added code to explorer text vboxcontainers to replace explorers' item info
+text objects, removed yearlabelname and all related code to it from audio
+explorer, renamed all reports
+11/7 - sorted every report numerically, fixed memory leaks, gained an idea,
+ALL OF A SUDDEN, to make a donation button
+11/7 - added script and subscnbox node to main, now it should handle all
+transitions between scenes, only need its texturerect and all explorers'
+code
+
+
+

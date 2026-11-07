@@ -19,3 +19,5 @@ size_flags_vertical = 10
 texture = ExtResource("2_r51t7")
 stretch_mode = 1
 script = ExtResource("3_b3uu4")
+
+[node name="subscnbox" type="Node" parent="." unique_id=14288177]

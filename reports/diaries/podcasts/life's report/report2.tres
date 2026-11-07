@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_ia76x")
 file = "res://assets/snd/reports/diaries/podcasts/life's report/report2.mp3"
-title = "report2"
+title = "Urie's Life Report 2"
 author = "Urie Wilson"
 date = "?-?-2020"
 metadata/_custom_type_script = "uid://dr5ws6yxdofts"

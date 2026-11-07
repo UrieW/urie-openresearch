@@ -1,7 +1,6 @@
 extends Control
 
 @onready var cd_name_label: Label = $title/reportname
-@onready var year_name_label: Label = $title/yearname
 
 @onready var f_ctrls: HBoxContainer = $title/filctrls
 @onready var dbtn:Button = $title/filctrls/dbtn
@@ -110,12 +109,8 @@ func hbox_focus_first_item():
 func setup_labels() -> void:
 	if !focused:
 		return
-		
-	var rd_array: PackedStringArray = Globals.current_dir.split("/")
-	var real_ldir: String = rd_array[rd_array.size()-2]
-	
+
 	cd_name_label.text  = Globals.current_report.title
-	year_name_label.text = real_ldir
 	
 func _process(_delta: float) -> void:
 	if !focused:
