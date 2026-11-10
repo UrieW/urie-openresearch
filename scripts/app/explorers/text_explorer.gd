@@ -17,10 +17,9 @@ extends Control
 var b_text: Array[String]
 var page_count: int = 0
 
-var focused: bool = false
+signal file_closed
 
 func _ready() -> void:
-	focused = true
 #	sbkg.transition_to_background(sbkg.bkgt2)
 	#max char for body of this node is 51 and lines, 5.
 	b_text.assign(c_report.make_pages(c_report.body)) 
@@ -60,16 +59,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		close_doc()
 		
 func _on_timer_timeout() -> void:
-	if !focused:
-		return
-		
 	print("Timer finished!")
 	next_page()
 	
 func next_page():
-	if !focused:
-		return
-		
 	if page_count == b_text.size():
 		return
 		
@@ -78,9 +71,6 @@ func next_page():
 	p_label.text = str(page_count)
 	
 func prev_page():
-	if !focused:
-		return
-		
 	if page_count == 1:
 		return
 		
@@ -89,35 +79,21 @@ func prev_page():
 	p_label.text = str(page_count)
 	
 func show_disclaimer():
-	if !focused:
-		return
-		
 	var DISCLAIMERPRELOAD: PackedScene = preload("res://scenes/app/disclaimer/disclaimer.tscn")
 	var disclaimer: Control = DISCLAIMERPRELOAD.instantiate()
 	get_tree().current_scene.add_child(disclaimer)
 #	show_disclaimer()
-	focused = false
-	
-	
 
 #func show_tutorial():
-#	if !focused:
-#		return
-		
 #	var TUTORIALPRELOAD: PackedScene = preload()
 #	var tutorial: Control = TUTORIALPRELOAD.instantiate()
 #	get_tree().current_scene.add_child(tutorial)
-#	focused = false
 	
 #func show_voting_page():
-#	if !focused:
-#		return
-		
 #	var VOTINGPANELPRELOAD: PackedScene = preload()
 #	var voting_panel: Control = VOTINGPANELPRELOAD.instantiate()
 #	get_tree().current_scene.add_child(voting_panel)
 #	votingpanel.unhide()
-#	focused = false
 	
 func close_doc():
 	#shifts to the folder it was in...
@@ -128,5 +104,4 @@ func close_doc():
 	get_parent().get_node("fileexplorer").grab_focus()
 	get_parent().get_node("fileexplorer").focused = true
 #	sbkg.transition_to_background(sbkg.bkgt1)
-	focused = false
-	queue_free()
+	file_closed.emit()

@@ -133,6 +133,9 @@ ALL OF A SUDDEN, to make a donation button
 11/7 - added script and subscnbox node to main, now it should handle all
 transitions between scenes, only need its texturerect and all explorers'
 code
-
-
+11/9 - okay, so i fixed a scene children problem, by removing queue_free
+from the children, adding signals in their classes and emitting them in
+their kill codes, before adding signal funcs to the main's 
+class...hopefully, that should do it...
+11/10 - completely removed the variable focused from all explorers, yet to do the buttons that way, too...
 

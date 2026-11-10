@@ -23,10 +23,9 @@ const FolderItemButtonPreload = preload("res://scenes/ui/buttons/navigation/item
 var all_items: Array = []
 var current_page: int = 0
 var total_pages: int = 1
-var focused:bool = false
+signal app_closed
 
 func _ready()->void:
-	focused = true
 	set_items_by_path.call_deferred(Globals.current_dir)
 #	ae_btn.pressed.connect(show_ae_menu)
 #	d_btn.pressed.connect(show_disclaimer)
@@ -38,9 +37,6 @@ func _ready()->void:
 	
 	
 func set_items(new_items: Array) -> void:
-	if !focused:
-		return
-		
 	all_items = new_items
 	total_pages = int(ceil(float(all_items.size()) / items_per_page))
 	current_page = clampi(current_page, 0, max(0, total_pages - 1))
@@ -122,10 +118,7 @@ func _unhandled_input(event: InputEvent) -> void:
 #	if event.is_action_pressed("ui_cancel"):
 #		exit_explorer()
 
-func set_items_by_path(path_str: String) -> void:
-	if !focused:
-		return
-		
+func set_items_by_path(path_str: String) -> void:	
 	var dir = DirAccess.open(path_str)
 	if not dir:
 		print("Failed to open directory: ", path_str)
@@ -166,9 +159,6 @@ func set_items_by_path(path_str: String) -> void:
 	set_items(result)
 
 func show_page(page: int) -> void:
-	if !focused:
-		return
-		
 	current_page = clampi(page, 0, total_pages-1)
 	
 	# Clear current children in grid
@@ -202,9 +192,6 @@ func show_page(page: int) -> void:
 		folder_item_button.show()
 		
 func show_report_info(target:Button)->void:
-	if !focused:
-		return
-		
 	item_info.text = target.s3text
 	var report = target.get_node("reportslot").report
 	
@@ -220,57 +207,36 @@ func show_report_info(target:Button)->void:
 		sub_info.show_report_info(report_instance)
 		
 func erase_report_info(target:Button)->void:
-	if !focused:
-		return
-		
 	if target.focus_exited:
 		item_info.text = ""
 		sub_info.hide_report_info()
 		sub_info.hide()
 		
 func next_page() -> void:
-	if !focused:
-		return
-		
 	if current_page < total_pages:
 		show_page(current_page + 1)
 
 func prev_page() -> void:
-	if !focused:
-		return
-		
 	if current_page > 1:
 		show_page(current_page - 1)
 
 #func show_ae_menu()->void:
-#	if !focused:
-#		return
-	
 #	var AEMENUPRELOAD: PackedScene = preload()
 #	var ae_menu: Control = AEMENUPRELOAD.instantiate()
 #	get_tree().current_scene.add_child(ae_menu)
-#	focused = false
 	
 func show_disclaimer()->void:
-	if !focused:
-		return
-	
 	var DISCLAIMERPRELOAD: PackedScene = preload("res://scenes/app/disclaimer/disclaimer.tscn")
 	var disclaimer:Control = DISCLAIMERPRELOAD.instantiate()
 	get_tree().current_scene.add_child(disclaimer)
-	focused = false
 
 #func show_tutorial()->void:
-#	if !focused:
-#		return
-	
 #	var TUTORIALPRELOAD: PackedScene = preload()
 #	var tutorial: Control = TUTORIALPRELOAD.instantiate()
 #	get_tree().current_scene.add_child(tutorial)
-#	focused = false
 
 func exit_folder()->void:
-	if Globals.current_dir == "res://reports" or !focused:
+	if Globals.current_dir == "res://reports":
 		return
 	
 	else:	
@@ -278,9 +244,6 @@ func exit_folder()->void:
 		set_items_by_path.call_deferred(Globals.current_dir)
 	
 func enter_folder(file_name: String)->void:
-	if !focused:
-		return
-		
 	var target: String = "/"
 	if file_name.ends_with(".tres"):
 		return
@@ -291,9 +254,6 @@ func enter_folder(file_name: String)->void:
 	set_items_by_path.call_deferred(Globals.current_dir)
 	
 func enter_file(file_name:String)->void:
-	if !focused:
-		return
-		
 	var target: String = file_name.get_base_dir()
 	
 	if !file_name.ends_with(".tres"):
@@ -311,14 +271,9 @@ func enter_file(file_name:String)->void:
 	else:
 		var audio_explorer: Control = audio_explorer_preload.instantiate()
 		get_tree().root.add_child(audio_explorer)
-		
-	focused = false
 
 #used for checking the dest, by button press
 func check_entry(target:Button)->void:
-	if !focused:
-		return
-	
 	var rslot = target.get_node("reportslot")
 	if not rslot:
 		return
@@ -331,6 +286,5 @@ func check_entry(target:Button)->void:
 func exit_explorer()->void:
 	#open_universal_menu
 	#if yes:
-	focused = false
 	#fade_out
-	queue_free()
+	app_closed.emit()

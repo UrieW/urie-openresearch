@@ -19,10 +19,9 @@ var keyboard_seek_step: float = 2.0 # Adjust this to change seek speed (in secon
 #var sbkg: TextureRect = get_parent().get_root().get_child("sbkg")
 
 var is_user_dragging: bool = false
-var focused: bool = false
+signal file_closed
 
 func _ready() -> void:
-	focused = true
 	audio_player.stream = load(Globals.current_report.file)
 #	sbkg.transition_to_background(sbkg.bkgt3)
 	setup_labels()
@@ -107,15 +106,9 @@ func hbox_focus_first_item():
 			first_child.grab_focus()
 	
 func setup_labels() -> void:
-	if !focused:
-		return
-
 	cd_name_label.text  = Globals.current_report.title
 	
 func _process(_delta: float) -> void:
-	if !focused:
-		return
-		
 	# FIX: Update slider value and time label when playing and NOT dragging
 	if audio_player.playing and not is_user_dragging:
 		var current_time = audio_player.get_playback_position()
@@ -127,9 +120,6 @@ func _process(_delta: float) -> void:
 		current_time_lbl.text = _format_time(time_slider.value)
 
 func _on_play_pause_pressed() -> void:
-	if !focused:
-		return
-		
 	if not audio_player.playing and not audio_player.stream_paused:
 		# Direct play from the start if it has stopped entirely
 		audio_player.play()
@@ -145,16 +135,10 @@ func _on_play_pause_pressed() -> void:
 
 # Stop updating slider via _process while the mouse drags it
 func _on_slider_drag_started() -> void:
-	if !focused:
-		return
-		
 	is_user_dragging = true
 
 # Snap audio timeline to exactly where the user drops the handle
 func _on_slider_drag_ended(value_changed: bool) -> void:
-	if !focused:
-		return
-		
 	is_user_dragging = false
 	if value_changed:
 		audio_player.seek(time_slider.value)
@@ -180,8 +164,7 @@ func close_doc():
 	get_parent().get_node("fileexplorer").grab_focus()
 	get_parent().get_node("fileexplorer").focused = true
 #	sbkg.transition_to_background(sbkg.bkgt1)
-	focused = false
-	queue_free()
+	file_closed.emit()
 
 #func show_disclaimer():
 #	if !focused:
@@ -191,24 +174,15 @@ func close_doc():
 #	var disclaimer: Control = DISCLAIMERPRELOAD.instantiate()	
 #	get_tree().current_scene.add_child(disclaimer)
 #	show_disclaimer()
-#	focused = false
 	
 #func show_tutorial():
-#	if !focused:
-#		return
-		
 #	var TUTORIALPRELOAD: PackedScene = preload()
 #	var tutorial: Control = TUTORIALPRELOAD.instantiate()
 #	get_tree().current_scene.add_child(tutorial3)
-#	focused = false
 	
 
 #func show_voting_panel():
-#	if !focused:
-#		return
-		
 #	var VOTINGPANELPRELOAD: PackedScene = preload()
 #	var voting_panel: Control = VOTINGPANELPRELOAD.instantiate()
 #	get_tree().current_scene.add_child(voting_panel)
 #	voting_panel.unhide()
-#	focused = false
