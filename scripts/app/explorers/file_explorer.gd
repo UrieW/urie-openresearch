@@ -82,7 +82,7 @@ func focus_navbox_index(index: int):
 		if target_button:
 			target_button.grab_focus.call_deferred()
 			
-func _unhandled_input(event: InputEvent) -> void:
+func _gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_up"):
 		for i in file_grid.get_children():
 			if file_grid.get_child_count() > 6:
@@ -91,6 +91,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				file_grid.get_child(13).grab_focus.call_deferred()
 			else:
 				navbox.get_child(0).grab_focus.call_deferred()
+		accept_event()
 	
 	if event.is_action_pressed("ui_down"):
 		for i in file_grid.get_children():
@@ -100,6 +101,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				file_grid.get_child(6).grab_focus.call_deferred()
 			else:
 				navbox.get_child(0).grab_focus.call_deferred()
+		accept_event()
 				
 	if event.is_action_pressed("ui_left"):
 		for i in file_grid.get_children():
@@ -107,16 +109,19 @@ func _unhandled_input(event: InputEvent) -> void:
 				file_grid.get_child(i.get_index() -1).grab_focus.call_deferred()
 			else:
 				navbox.get_child(navbox.get_child_count()-1).grab_focus.call_deferred()
-				
+		accept_event()
+		
 	if event.is_action_pressed("ui_right"):
 		for i in file_grid.get_children():
 			if i.get_index() < file_grid.get_child_count() - 1:
 				file_grid.get_child(i.get_index() +1).grab_focus.call_deferred()
 			else:
 				navbox.get_child(0).grab_focus.call_deferred()
-				
+		accept_event()
+		
 #	if event.is_action_pressed("ui_cancel"):
 #		exit_explorer()
+#		accept_event()
 
 func set_items_by_path(path_str: String) -> void:	
 	var dir = DirAccess.open(path_str)

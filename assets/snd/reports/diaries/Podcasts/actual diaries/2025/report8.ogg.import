@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://o6gvqd4hp5an"
+path="res://.godot/imported/report8.ogg-70e07a4117805d362bbcc19ad7c43f33.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/snd/reports/diaries/Podcasts/actual diaries/2025/report8.ogg"
+dest_files=["res://.godot/imported/report8.ogg-70e07a4117805d362bbcc19ad7c43f33.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

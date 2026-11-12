@@ -68,16 +68,22 @@ offset_bottom = -0.007003784
 
 [node name="dbtn" type="Button" parent="controls/pgctrls" unique_id=445624438]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "  !  "
 
 [node name="tbtn" type="Button" parent="controls/pgctrls" unique_id=132204534]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "  T  "
 
 [node name="back" type="Button" parent="controls/pgctrls" unique_id=1005093998]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "<    "
 
@@ -88,16 +94,22 @@ text = "0"
 
 [node name="next" type="Button" parent="controls/pgctrls" unique_id=1118221396]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "    >"
 
 [node name="votebtn" type="Button" parent="controls/pgctrls" unique_id=341749545]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "  V  "
 
 [node name="close" type="Button" parent="controls/pgctrls" unique_id=354401088]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "Close"
 

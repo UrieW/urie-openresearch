@@ -45,20 +45,22 @@ func _ready() -> void:
 	
 	time_slider.grab_focus.call_deferred()
 	
-func _unhandled_input(event: InputEvent) -> void:
+func _gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_down"):
 		if play_pause_btn.has_focus():
 			time_slider.grab_focus.call_deferred()
 		for i in f_ctrls.get_children():
 			if i.has_focus():
 				play_pause_btn.grab_focus.call_deferred()
+		accept_event()
 	
 	if event.is_action_pressed("ui_up"):
 		if play_pause_btn.has_focus():
 			f_ctrls.get_child(0).grab_focus.call_deferred()
 		if time_slider.has_focus():
 				play_pause_btn.grab_focus.call_deferred()
-				
+		accept_event()
+		
 	if event.is_action_pressed("ui_left"):
 		if time_slider.has_focus():
 			# Lower value, clamp it so it doesn't go below 0
@@ -72,6 +74,7 @@ func _unhandled_input(event: InputEvent) -> void:
 					f_ctrls.get_child(i.get_index() -1).grab_focus.call_deferred()
 				else:
 					time_slider.grab_focus.call_deferred()
+		accept_event()
 								
 	if event.is_action_pressed("ui_right"):
 		if time_slider.has_focus():
@@ -86,10 +89,11 @@ func _unhandled_input(event: InputEvent) -> void:
 					f_ctrls.get_child(i.get_index() +1).grab_focus.call_deferred()
 				else:
 					play_pause_btn.grab_focus.call_deferred()
+		accept_event()
 				
 	if event.is_action_pressed("ui_cancel"):
 		close_doc()
-
+		accept_event()
 
 func hbox_focus_first_item():
 	if f_ctrls.get_child_count() > 0:

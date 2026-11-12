@@ -155,7 +155,23 @@ wait...reformatted all reports, fixed all explorers, fixed background
 transitions of main scene
 11/12 - changed project's system font, changed project's default font to
 AdventPro-SemiBold, fixed all text, reformatted audio length text 
-wherever due, gave all text outline sizes of 8, resized everything 
-afterward, now the deranged focus of the controls should be completely 
-obvious, now...
-
+wherever due, gave all text/button text outline sizes of 8, resized
+everything afterward, now the deranged focus of the controls should be
+completely obvious, now...
+11/12 - changed all audio reports to .ogg, now to link them, let's rock and 
+roll!!!!!!
+11/12 - all audio reports are linked, yeeehaaaawwwwwwww!!!!! turned all
+unhandled input methods into gui input methods to block parent focus
+away from child, reformatted podcastaudioreport class, now to test it...
+11/12 - changed all buttons, found a bug where the audio file's seeker only
+moves when you drag it with the mouse, another that happens when it only
+plays from dragged spot during play, another that changes the play button,
+and adds text to it, and another that makes it go back to the initial play 
+position when seeker is altered and plays from it, found the buttons not
+showing icon hover/focus colors i put in, found out that i can use a
+universal button for most of my button problems, should try that
+out...changed window panel colors, removed regbutton and its folder,
+removed generic font file from assets collection, added accept_event to
+every _gui_input event
+11/12 - worth every cent, but i completed the disclaimer, all it needs is
+a script, as i just learned and jotted a TON!!!!!!!

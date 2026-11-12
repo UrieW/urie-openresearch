@@ -66,7 +66,7 @@ func show_page(report: TxtReportData, page_index: int) -> void:
 	report.current_page = clampi(page_index - 1, 0, page_scroll_offsets.size() - 1)
 	body.get_v_scroll_bar().value = page_scroll_offsets[report.current_page]
 	
-func _unhandled_input(event: InputEvent) -> void:
+func _gui_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_left"):
 		for i in pg_ctrls.get_children():
 			if i.has_focus():
@@ -74,7 +74,8 @@ func _unhandled_input(event: InputEvent) -> void:
 					pg_ctrls.get_child(i.get_index() - 1).grab_focus.call_deferred()
 				else:
 					pg_ctrls.get_child(pg_ctrls.get_child_count() - 1).grab_focus.call_deferred()
-								
+		accept_event()
+				
 	if event.is_action_pressed("ui_right"):
 		for i in pg_ctrls.get_children():
 			if i.has_focus():
@@ -82,10 +83,12 @@ func _unhandled_input(event: InputEvent) -> void:
 					pg_ctrls.get_child(i.get_index() + 1).grab_focus.call_deferred()
 				else:
 					pg_ctrls.get_child(0).grab_focus.call_deferred()
-				
+		accept_event()
+	
 	if event.is_action_pressed("ui_cancel"):
 		close_doc()
-		
+		accept_event()
+	
 func _on_timer_timeout() -> void:
 	print("Timer finished!")
 	next_page()

@@ -2,9 +2,9 @@ extends ReportData
 class_name PodcastReportData
 
 var audio_player: AudioStreamPlayer = AudioStreamPlayer.new()
-@export_file("*.mp3") var file: String
+@export_file("*.ogg") var file: String
 var minutes: int
-var seconds:int
+var seconds: int
 var hours: int
 
 func equip_time()->String:

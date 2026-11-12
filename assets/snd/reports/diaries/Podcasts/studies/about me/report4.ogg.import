@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5lf7htf1c7qp"
+path="res://.godot/imported/report4.ogg-b5f6dec4d21c7a5e3cca01865e779368.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/snd/reports/diaries/Podcasts/studies/about me/report4.ogg"
+dest_files=["res://.godot/imported/report4.ogg-b5f6dec4d21c7a5e3cca01865e779368.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

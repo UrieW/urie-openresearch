@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ms23bfebptvt"
+path="res://.godot/imported/report6.ogg-ab073a54ad8ce97b495a52380259849f.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/snd/reports/diaries/Podcasts/life's report/report6.ogg"
+dest_files=["res://.godot/imported/report6.ogg-ab073a54ad8ce97b495a52380259849f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

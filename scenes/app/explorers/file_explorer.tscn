@@ -66,26 +66,36 @@ offset_bottom = 0.019989014
 
 [node name="ae" type="Button" parent="explorer/navibox" unique_id=416684103]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "  AE  "
 
 [node name="dbtn" type="Button" parent="explorer/navibox" unique_id=339088488]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "   !   "
 
 [node name="tbtn" type="Button" parent="explorer/navibox" unique_id=1513931290]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "  T  "
 
 [node name="fexit" type="Button" parent="explorer/navibox" unique_id=1415423483]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "Exit Folder"
 
 [node name="back" type="Button" parent="explorer/navibox" unique_id=606369269]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "<     "
 
@@ -97,11 +107,15 @@ text = "0"
 
 [node name="next" type="Button" parent="explorer/navibox" unique_id=392186204]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "     > "
 
 [node name="eabtn" type="Button" parent="explorer/navibox" unique_id=1802858712]
 layout_mode = 2
+theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
 text = "Exit App"
 

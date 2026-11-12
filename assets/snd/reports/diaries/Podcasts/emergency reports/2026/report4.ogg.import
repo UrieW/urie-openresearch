@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://btt0m284rdkuy"
+path="res://.godot/imported/report4.ogg-4990abf6ac66bc2fdf80b1c05b8fd229.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/snd/reports/diaries/Podcasts/emergency reports/2026/report4.ogg"
+dest_files=["res://.godot/imported/report4.ogg-4990abf6ac66bc2fdf80b1c05b8fd229.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
