@@ -16,8 +16,6 @@ extends Control
 
 var keyboard_seek_step: float = 2.0 # Adjust this to change seek speed (in seconds)
 
-#var sbkg: TextureRect = get_parent().get_root().get_child("sbkg")
-
 var is_user_dragging: bool = false
 signal file_closed
 
@@ -163,7 +161,7 @@ func close_doc():
 	#shifts focus to the file explorer and changes default background...
 	get_parent().get_node("fileexplorer").grab_focus()
 	get_parent().get_node("fileexplorer").focused = true
-#	sbkg.transition_to_background(sbkg.bkgt1)
+
 	file_closed.emit()
 
 #func show_disclaimer():

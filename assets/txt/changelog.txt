@@ -138,4 +138,13 @@ from the children, adding signals in their classes and emitting them in
 their kill codes, before adding signal funcs to the main's 
 class...hopefully, that should do it...
 11/10 - completely removed the variable focused from all explorers, yet to do the buttons that way, too...
-
+11/11 - made intro's script, it might not take too long for the app events
+script to be made
+11/11 - added 'file opened' signals to main explorer and connected them to 
+their proper funcs, now, how in the heck am i going to get the signals for
+file_closed?
+11/11 - completed the main scene, all i need to do, is to change its
+children's tree framework, yeeehaaaawwww!!!! forgot about a bug in the
+file explorer that just straight up adds the file scenes, will fix it in 
+a hurry...more explorers show that it can just add the file explorer, oh,
+geez...

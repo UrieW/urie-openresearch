@@ -12,7 +12,6 @@ extends Control
 @onready var exit_btn:Button = $controls/pgctrls/close
 
 @onready var c_report: ReportData = Globals.current_report
-#var sbkg: TextureRect = get_parent().get_root().get_child("sbkg")
 
 var b_text: Array[String]
 var page_count: int = 0
@@ -103,5 +102,5 @@ func close_doc():
 	#changes focus back to the file explorer and changes backgrounds...
 	get_parent().get_node("fileexplorer").grab_focus()
 	get_parent().get_node("fileexplorer").focused = true
-#	sbkg.transition_to_background(sbkg.bkgt1)
+
 	file_closed.emit()
