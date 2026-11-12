@@ -26,12 +26,16 @@ Globals="*uid://ddjl7tn5gghi1"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 
 [editor]
 
 movie_writer/fps=32
+
+[gui]
+
+theme/custom_font="uid://dimbsgty4ktok"
 
 [input]
 

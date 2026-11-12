@@ -17,36 +17,44 @@ script = ExtResource("1_u63gt")
 
 [node name="tilabel" type="Label" parent="." unique_id=378145644]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "Title:"
 
 [node name="titles" type="RichTextLabel" parent="." unique_id=260082641]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "titles"
 fit_content = true
 scroll_active = false
 
 [node name="authlabel" type="Label" parent="." unique_id=1732173655]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "Author:"
 
 [node name="authors" type="Label" parent="." unique_id=1246249514]
 custom_maximum_size = Vector2(175, 120)
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "authors"
 autowrap_mode = 3
 
 [node name="datelabel" type="Label" parent="." unique_id=1289159441]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "Date:"
 
 [node name="datetext" type="Label" parent="." unique_id=230739968]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "dnum"
 
 [node name="lenlabel" type="Label" parent="." unique_id=478344439]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "Length:"
 
 [node name="lentext" type="Label" parent="." unique_id=90212706]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "lnum"

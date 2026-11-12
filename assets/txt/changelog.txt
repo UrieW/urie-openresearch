@@ -148,3 +148,14 @@ children's tree framework, yeeehaaaawwww!!!! forgot about a bug in the
 file explorer that just straight up adds the file scenes, will fix it in 
 a hurry...more explorers show that it can just add the file explorer, oh,
 geez...
+11/11 - fixed a major get_parent error in file_explorer, in which the
+command had to be entered in a chain of itself enough to find the main
+explorer's file opening signals and emit them, now need the add the 
+wait...reformatted all reports, fixed all explorers, fixed background
+transitions of main scene
+11/12 - changed project's system font, changed project's default font to
+AdventPro-SemiBold, fixed all text, reformatted audio length text 
+wherever due, gave all text outline sizes of 8, resized everything 
+afterward, now the deranged focus of the controls should be completely 
+obvious, now...
+

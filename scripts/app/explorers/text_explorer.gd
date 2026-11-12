@@ -15,17 +15,12 @@ extends Control
 
 var b_text: Array[String]
 var page_count: int = 0
+var page_scroll_offsets: Array[float] = []
 
 signal file_closed
 
 func _ready() -> void:
-#	sbkg.transition_to_background(sbkg.bkgt2)
-	#max char for body of this node is 51 and lines, 5.
-	b_text.assign(c_report.make_pages(c_report.body)) 
-	body.text = b_text[0]
-	page_count = 1
-	p_label.text = str(page_count)
-	
+	load_report(c_report)
 	$subinfo/textrows.show_report_info(c_report)
 	
 #	d_btn.pressed.connect(show_disclaimer)
@@ -36,6 +31,40 @@ func _ready() -> void:
 	exit_btn.pressed.connect(close_doc)
 	
 	next_btn.grab_focus.call_deferred()
+
+func load_report(report: TxtReportData) -> void:
+	body.scroll_active = false
+	body.clip_contents = true
+	body.text = report.body
+	
+	# Wait one frame for RichTextLabel to wrap and lay out all lines
+	await get_tree().process_frame
+	
+	page_scroll_offsets = [0.0]
+	var current_page_start_y: float = 0.0
+	var box_height: float = body.size.y
+	
+	for line in range(body.get_line_count()):
+		var line_top: float = body.get_line_offset(line)
+		var line_bottom: float = line_top + body.get_line_height(line)
+		
+		# If this line crosses the bottom edge of the box, start a new page at this line
+		if line_bottom - current_page_start_y > box_height:
+			current_page_start_y = line_top
+			page_scroll_offsets.append(current_page_start_y)
+			
+	report.pages = page_scroll_offsets.size()
+	report.lines = body.get_line_count()
+	report.current_page = 0
+	
+	# Start at page 1 immediately
+	page_count = 1
+	show_page(report, page_count)
+	p_label.text = str(page_count)
+	
+func show_page(report: TxtReportData, page_index: int) -> void:
+	report.current_page = clampi(page_index - 1, 0, page_scroll_offsets.size() - 1)
+	body.get_v_scroll_bar().value = page_scroll_offsets[report.current_page]
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_left"):
@@ -49,7 +78,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_right"):
 		for i in pg_ctrls.get_children():
 			if i.has_focus():
-				if i.get_index() > pg_ctrls.get_child_count() - 1:
+				if i.get_index() < pg_ctrls.get_child_count() - 1:
 					pg_ctrls.get_child(i.get_index() + 1).grab_focus.call_deferred()
 				else:
 					pg_ctrls.get_child(0).grab_focus.call_deferred()
@@ -61,20 +90,20 @@ func _on_timer_timeout() -> void:
 	print("Timer finished!")
 	next_page()
 	
-func next_page():
-	if page_count == b_text.size():
+func next_page() -> void:
+	if page_count >= c_report.pages:
 		return
 		
 	page_count += 1
-	body.text = b_text[page_count-1]
+	show_page(c_report, page_count)
 	p_label.text = str(page_count)
 	
-func prev_page():
-	if page_count == 1:
+func prev_page() -> void:
+	if page_count <= 1:
 		return
 		
 	page_count -= 1
-	body.text = b_text[page_count-1]
+	show_page(c_report, page_count)
 	p_label.text = str(page_count)
 	
 func show_disclaimer():
@@ -98,9 +127,5 @@ func close_doc():
 	#shifts to the folder it was in...
 	Globals.current_dir = Globals.current_report.resource_path.get_base_dir() 
 	Globals.current_report = null
-	
-	#changes focus back to the file explorer and changes backgrounds...
-	get_parent().get_node("fileexplorer").grab_focus()
-	get_parent().get_node("fileexplorer").focused = true
 
 	file_closed.emit()

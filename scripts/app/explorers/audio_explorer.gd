@@ -82,7 +82,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled() # Prevent focus from breaking out
 		for i in f_ctrls.get_children():
 			if i.has_focus():
-				if i.get_index() > f_ctrls.get_child_count()-1:
+				if i.get_index() < f_ctrls.get_child_count()-1:
 					f_ctrls.get_child(i.get_index() +1).grab_focus.call_deferred()
 				else:
 					play_pause_btn.grab_focus.call_deferred()
@@ -144,10 +144,10 @@ func _on_slider_drag_ended(value_changed: bool) -> void:
 
 # Utility helper to turn raw floats like 124.5 into formatted "02:04"
 func _format_time(time_in_seconds: float) -> String:
+	var hours:int = int(time_in_seconds / 3600)
 	var minutes: int = int(time_in_seconds / 60)
 	var seconds: int = int(time_in_seconds) % 60
-	var mseconds: int = int((time_in_seconds - int(time_in_seconds)) * 1000)
-	return "%02d:%02d:%03d" % [minutes, seconds, mseconds]
+	return "%02d:%02d:%02d" % [hours, minutes, seconds]
 	
 func close_doc():
 	#stops playing file
@@ -157,10 +157,6 @@ func close_doc():
 	#returns to the folder it was in...
 	Globals.current_dir = Globals.current_report.resource_path.get_base_dir() 
 	Globals.current_report = null
-	
-	#shifts focus to the file explorer and changes default background...
-	get_parent().get_node("fileexplorer").grab_focus()
-	get_parent().get_node("fileexplorer").focused = true
 
 	file_closed.emit()
 

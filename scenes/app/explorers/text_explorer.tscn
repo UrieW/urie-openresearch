@@ -34,10 +34,11 @@ anchor_left = 0.05
 anchor_top = 0.081
 anchor_right = 0.95000005
 anchor_bottom = 0.90800005
-offset_left = -0.050001144
-offset_top = 0.048999786
-offset_right = 0.049987793
-offset_bottom = -0.06800842
+offset_left = -2.0500011
+offset_top = 0.5380001
+offset_right = 1.0499878
+offset_bottom = 0.7839966
+theme_override_constants/outline_size = 8
 text = "text"
 scroll_active = false
 
@@ -58,39 +59,46 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.22900002
 anchor_top = 0.279
-anchor_right = 0.79600006
+anchor_right = 0.76500005
 anchor_bottom = 0.78700006
 offset_left = -0.21800995
 offset_top = -0.019001007
-offset_right = -20.832031
+offset_right = -7.130005
 offset_bottom = -0.007003784
 
 [node name="dbtn" type="Button" parent="controls/pgctrls" unique_id=445624438]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "  !  "
 
 [node name="tbtn" type="Button" parent="controls/pgctrls" unique_id=132204534]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "  T  "
 
 [node name="back" type="Button" parent="controls/pgctrls" unique_id=1005093998]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "<    "
 
 [node name="page" type="Label" parent="controls/pgctrls" unique_id=638330188]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "0"
 
 [node name="next" type="Button" parent="controls/pgctrls" unique_id=1118221396]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "    >"
 
 [node name="votebtn" type="Button" parent="controls/pgctrls" unique_id=341749545]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "  V  "
 
 [node name="close" type="Button" parent="controls/pgctrls" unique_id=354401088]
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "Close"
 
 [node name="subinfo" type="Panel" parent="." unique_id=1364928745]

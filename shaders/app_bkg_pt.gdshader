@@ -5,7 +5,7 @@ uniform vec2 direction = vec2(1.0, 1.0);
 uniform float speed_scale = 0.25;
 
 // Uniforms for crossfading textures
-uniform sampler2D texture_next : hint_screen_texture, filter_nearest, repeat_enable; 
+uniform sampler2D texture_next : repeat_enable; 
 uniform float fade_factor : hint_range(0.0, 1.0) = 0.0; // 0.0 = old texture, 1.0 = new texture
 
 void fragment() {

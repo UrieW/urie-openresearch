@@ -42,6 +42,7 @@ anchor_right = 0.725
 anchor_bottom = 1.033
 offset_top = 0.020000458
 offset_bottom = 0.020000458
+theme_override_constants/outline_size = 8
 text = "0"
 horizontal_alignment = 1
 visible_characters = 2

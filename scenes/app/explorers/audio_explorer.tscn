@@ -30,15 +30,15 @@ theme_override_styles/panel = ExtResource("1_0hf8j")
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.46100003
-anchor_top = 0.27
-anchor_right = 0.53900003
+anchor_left = 0.43100002
+anchor_top = 0.26000002
+anchor_right = 0.48900002
 anchor_bottom = 0.73
-offset_left = -19.501007
-offset_top = -0.50000095
-offset_right = -19.499023
+offset_left = -0.3010254
+offset_right = 0.039978027
 offset_bottom = -0.5
 size_flags_horizontal = 4
+theme_override_constants/outline_size = 8
 text = "report"
 
 [node name="filctrls" type="HBoxContainer" parent="title" unique_id=1507762317]
@@ -46,29 +46,33 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.041
 anchor_top = 0.18
-anchor_right = 0.29200003
+anchor_right = 0.27800003
 anchor_bottom = 0.8
 offset_left = -0.24000168
-offset_right = -49.88002
+offset_right = -40.920013
 
 [node name="dbtn" type="Button" parent="title/filctrls" unique_id=349296210]
 texture_filter = 1
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "  !  "
 
 [node name="tbtn" type="Button" parent="title/filctrls" unique_id=223408530]
 texture_filter = 1
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "  T  "
 
 [node name="closebtn" type="Button" parent="title/filctrls" unique_id=64836342]
 texture_filter = 1
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "Close"
 
 [node name="vbtn" type="Button" parent="title/filctrls" unique_id=478778081]
 texture_filter = 1
 layout_mode = 2
+theme_override_constants/outline_size = 8
 text = "  V  "
 
 [node name="explorer" type="Panel" parent="." unique_id=1962162731]
@@ -151,31 +155,31 @@ grow_vertical = 0
 theme_override_styles/panel = ExtResource("1_0hf8j")
 
 [node name="starttime" type="Label" parent="iteminfo" unique_id=845491557]
-texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.061000004
-anchor_top = 0.29500002
-anchor_right = 0.21100001
+anchor_top = 0.328
+anchor_right = 0.155
 anchor_bottom = 0.67200005
-offset_left = -0.040000916
-offset_top = 0.0049991608
-offset_right = -0.040008545
-offset_bottom = 0.0079956055
-text = "00:00:00:000"
+offset_left = 0.9599991
+offset_top = -0.0080013275
+offset_right = 0.80000305
+offset_bottom = -0.9920044
+theme_override_constants/outline_size = 8
+text = "00:00:00"
 
 [node name="maxlength" type="Label" parent="iteminfo" unique_id=1059505046]
-texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.81100005
-anchor_top = 0.29500002
-anchor_right = 0.961
+anchor_left = 0.82000005
+anchor_top = 0.328
+anchor_right = 0.91400003
 anchor_bottom = 0.67200005
-offset_left = -0.040039063
-offset_top = 0.0049991608
-offset_right = -0.040039063
-offset_bottom = 0.0079956055
-text = "00:00:00:000"
+offset_left = 0.19995117
+offset_top = -0.0080013275
+offset_right = 0.039978027
+offset_bottom = -0.9920044
+theme_override_constants/outline_size = 8
+text = "00:00:00"
 
 [node name="currentfile" type="AudioStreamPlayer" parent="." unique_id=1134843292]

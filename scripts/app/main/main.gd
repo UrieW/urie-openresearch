@@ -25,7 +25,7 @@ func _ready() -> void:
 	text_opened.connect(on_text_opened)
 	audio_opened.connect(on_audio_opened)
 
-func switch_sub_scene(new_scene: PackedScene) -> void:
+func switch_sub_scene(new_scene: PackedScene, delay: float = 0.5) -> void:
 	# 1. Safely remove the existing sub-scene if there is one
 	if is_instance_valid(current_sub_scene):
 		if current_sub_scene == scene_b:
@@ -33,7 +33,10 @@ func switch_sub_scene(new_scene: PackedScene) -> void:
 		elif current_sub_scene == scene_c:
 			text_opened.emit()
 			
-		fade_and_remove_child(current_sub_scene, 1.5)
+		fade_and_remove_child(current_sub_scene, 0.5)
+	
+	# Wait for the fade-out (1.5s) PLUS your custom delay before continuing
+	await get_tree().create_timer(1.5 + delay).timeout
 	
 	# 2. Create an instance of the new scene
 	current_sub_scene = new_scene.instantiate()
@@ -41,7 +44,7 @@ func switch_sub_scene(new_scene: PackedScene) -> void:
 		current_sub_scene.file_closed.connect(on_file_closed)
 	
 	# 3. Add it as a child of your container node
-	fade_and_add_child(current_sub_scene, 1.5)
+	fade_and_add_child(current_sub_scene, 0.5)
 
 ## Smoothly fades out a specified child node and destroys it
 func fade_and_remove_child(child_node: CanvasItem, duration: float = 0.5) -> void:
@@ -73,9 +76,12 @@ func fade_and_add_child(child_node: CanvasItem, duration: float = 0.5)->void:
 	
 func on_file_closed()->void:
 		s_bkg.transition_to_background(s_bkg.bkgt1)
+		switch_sub_scene(scene_a)
 
 func on_audio_opened()->void:
 	s_bkg.transition_to_background(s_bkg.bkgt2)
+	switch_sub_scene(scene_b)
 
 func on_text_opened()->void:
 	s_bkg.transition_to_background(s_bkg.bkgt3)
+	switch_sub_scene(scene_c)

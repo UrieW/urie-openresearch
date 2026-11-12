@@ -187,11 +187,11 @@ func show_page(page: int) -> void:
 			folder_item_button.mouse_entered.connect(show_report_info.bind(folder_item_button))
 			folder_item_button.mouse_exited.connect(erase_report_info.bind(folder_item_button))
 			folder_item_button.pressed.connect(check_entry.bind(folder_item_button))
-			itemnum.text = str(i)
+			itemnum.text = str(i+1)
 		
 		folder_item_button.show()
 		
-func show_report_info(target:Button)->void:
+func show_report_info(target: Button) -> void:
 	item_info.text = target.s3text
 	var report = target.get_node("reportslot").report
 	
@@ -202,9 +202,8 @@ func show_report_info(target:Button)->void:
 	var report_instance = load(report)
 	if report_instance is ReportData:
 		sub_info.show()
-		if report_instance is TxtReportData:
-			report_instance.make_pages(report_instance.body)
 		sub_info.show_report_info(report_instance)
+
 		
 func erase_report_info(target:Button)->void:
 	if target.focus_exited:
@@ -261,16 +260,11 @@ func enter_file(file_name:String)->void:
 	
 	Globals.current_dir = target
 	Globals.current_report = load(file_name)
-	
-	const audio_explorer_preload = preload("res://scenes/app/explorers/audio_explorer.tscn")
-	const text_explorer_preload = preload("res://scenes/app/explorers/text_explorer.tscn")
-	
+		
 	if Globals.current_report is TxtReportData:
-		var text_explorer: Control = text_explorer_preload.instantiate()
-		get_tree().root.add_child(text_explorer)
+		get_parent().get_parent().text_opened.emit()
 	else:
-		var audio_explorer: Control = audio_explorer_preload.instantiate()
-		get_tree().root.add_child(audio_explorer)
+		get_parent().get_parent().audio_opened.emit()
 
 #used for checking the dest, by button press
 func check_entry(target:Button)->void:

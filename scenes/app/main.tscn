@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://brubd3lhfryl0" path="res://assets/gfx/gui/backgrounds/theme1.png" id="2_r51t7"]
 [ext_resource type="Script" uid="uid://brd44l1h013s5" path="res://scripts/base/ui/bkg/texture_rect.gd" id="3_b3uu4"]
 
-[node name="Main" type="Node2D" unique_id=1716179303]
+[node name="main" type="Node2D" unique_id=1716179303]
 script = ExtResource("1_r51t7")
 
 [node name="sbkg" type="TextureRect" parent="." unique_id=769952466]

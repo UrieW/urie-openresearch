@@ -1,24 +1,35 @@
 extends ReportData
 class_name TxtReportData
 
-@export_multiline var body: String # The magic keyword for long paragraphs
-var pages: int
-var paragraphs:int
-var words: int
-var sentences: int
-var lines:int
-var current_page: int
-var max_page_chars: int = 285
+# Match these to your Text Explorer's $explorer/text RichTextLabel size & font
+const READER_BOX_SIZE := Vector2(400, 250) 
+const READER_FONT: Font = preload("res://assets/fnt/AdventPro-SemiBold.ttf")
+const READER_FONT_SIZE: int = 16
 
-func _init() -> void:
-	make_pages(body)
+@export_multiline var body: String:
+	set(value):
+		body = value
+		_update_stats()
+
+var pages: int = 1
+var paragraphs: int = 0
+var words: int = 0
+var sentences: int = 0
+var lines: int = 0
+var current_page: int = 0
+
+func _update_stats() -> void:
+	paragraphs = body.split("\n", false).size()
+	words = body.split(" ", false).size()
 	
-func make_pages(text:String) -> Array[String]:
-	var result:Array[String] = []
-	var current_idx = 0
-	while current_idx < text.length():
-		var page_chunk = text.substr(current_idx, max_page_chars)
-		result.append(page_chunk)
-		current_idx += max_page_chars
-		pages += 1
-	return result
+	# Calculate exact wrapped height using your reader's width
+	var text_size: Vector2 = READER_FONT.get_multiline_string_size(
+		body,
+		HORIZONTAL_ALIGNMENT_LEFT,
+		READER_BOX_SIZE.x,
+		READER_FONT_SIZE
+	)
+	
+	var line_height: float = READER_FONT.get_height(READER_FONT_SIZE)
+	lines = maxi(1, ceili(text_size.y / line_height))
+	pages = maxi(1, ceili(text_size.y / READER_BOX_SIZE.y))
