@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://db226y8sjw8ye"]
 
 [ext_resource type="StyleBox" uid="uid://cpwrhl42uw007" path="res://shaders/windowstyle2.tres" id="1_ckpef"]
+[ext_resource type="Script" uid="uid://1uxsq7hi2xx7" path="res://scripts/app/disclaimer/disclaimer.gd" id="1_i3cxg"]
 
 [node name="disclaimer" type="Control" unique_id=1554517983]
 layout_mode = 3
 anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_i3cxg")
+
+[node name="Panel" type="Panel" parent="." unique_id=351984103]
+layout_mode = 1
 offset_right = 640.0
 offset_bottom = 360.0
 
@@ -12,9 +19,12 @@ offset_bottom = 360.0
 layout_mode = 0
 offset_left = 20.0
 offset_top = 30.0
-offset_right = 1900.0
+offset_right = 620.0
 offset_bottom = 330.0
 size_flags_horizontal = 3
+offset_transform_enabled = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
 
 [node name="clips" type="HBoxContainer" parent="scrolls" unique_id=1285648670]
 layout_mode = 2
@@ -23,6 +33,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = 40
 
 [node name="mainmargs1" type="MarginContainer" parent="scrolls/clips" unique_id=1137131856]
+custom_minimum_size = Vector2(600, 300)
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -35,10 +46,10 @@ theme_override_styles/panel = ExtResource("1_ckpef")
 layout_mode = 0
 offset_right = 600.0
 offset_bottom = 300.0
-theme_override_constants/margin_left = 18
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 18
-theme_override_constants/margin_bottom = 18
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
 [node name="vbox" type="VBoxContainer" parent="scrolls/clips/mainmargs1/panel1/panelmargs" unique_id=335629344]
 layout_mode = 2
@@ -70,6 +81,7 @@ text = "1 of 3"
 horizontal_alignment = 1
 
 [node name="mainmargs2" type="MarginContainer" parent="scrolls/clips" unique_id=1499426723]
+custom_minimum_size = Vector2(600, 300)
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -82,10 +94,10 @@ theme_override_styles/panel = ExtResource("1_ckpef")
 layout_mode = 0
 offset_right = 600.0
 offset_bottom = 300.0
-theme_override_constants/margin_left = 18
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 18
-theme_override_constants/margin_bottom = 18
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
 [node name="vbox" type="VBoxContainer" parent="scrolls/clips/mainmargs2/panel1/panelmargs" unique_id=357273400]
 layout_mode = 2
@@ -118,6 +130,7 @@ text = "2 of 3"
 horizontal_alignment = 1
 
 [node name="mainmargs3" type="MarginContainer" parent="scrolls/clips" unique_id=1318678927]
+custom_minimum_size = Vector2(600, 300)
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -130,10 +143,10 @@ theme_override_styles/panel = ExtResource("1_ckpef")
 layout_mode = 0
 offset_right = 600.0
 offset_bottom = 300.0
-theme_override_constants/margin_left = 18
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 18
-theme_override_constants/margin_bottom = 18
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
 [node name="vbox" type="VBoxContainer" parent="scrolls/clips/mainmargs3/panel1/panelmargs" unique_id=570608101]
 layout_mode = 2

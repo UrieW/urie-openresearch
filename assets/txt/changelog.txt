@@ -175,3 +175,8 @@ removed generic font file from assets collection, added accept_event to
 every _gui_input event
 11/12 - worth every cent, but i completed the disclaimer, all it needs is
 a script, as i just learned and jotted a TON!!!!!!!
+11/12 - don't do drugs, kids, learned from AwkwardHawk, that input map
+vars are extremely important to add, fixed disclaimer scene, now to fully
+add it...
+11/13 - added a panel as disclaimer's top child, even more input map vars
+
