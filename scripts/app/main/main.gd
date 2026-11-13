@@ -33,10 +33,10 @@ func switch_sub_scene(new_scene: PackedScene, delay: float = 0.5) -> void:
 		elif current_sub_scene == scene_c:
 			text_opened.emit()
 			
-		fade_and_remove_child(current_sub_scene, 0.5)
+		fade_and_remove_child(current_sub_scene)
 	
-	# Wait for the fade-out (1.5s) PLUS your custom delay before continuing
-	await get_tree().create_timer(1.5 + delay).timeout
+	# Wait for the fade-out (0.5s) PLUS your custom delay before continuing
+	await get_tree().create_timer(0.5 + delay).timeout
 	
 	# 2. Create an instance of the new scene
 	current_sub_scene = new_scene.instantiate()
@@ -44,10 +44,10 @@ func switch_sub_scene(new_scene: PackedScene, delay: float = 0.5) -> void:
 		current_sub_scene.file_closed.connect(on_file_closed)
 	
 	# 3. Add it as a child of your container node
-	fade_and_add_child(current_sub_scene, 0.5)
+	fade_and_add_child(current_sub_scene)
 
 ## Smoothly fades out a specified child node and destroys it
-func fade_and_remove_child(child_node: CanvasItem, duration: float = 0.5) -> void:
+func fade_and_remove_child(child_node: CanvasItem, duration: float = 0.3) -> void:
 	# 1. Validation check to prevent crashes if the child was already freed elsewhere
 	if not is_instance_valid(child_node):
 		return
@@ -61,7 +61,7 @@ func fade_and_remove_child(child_node: CanvasItem, duration: float = 0.5) -> voi
 	# 4. Tell the tween to free the child node the instant the animation ends
 	tween.tween_callback(child_node.queue_free)
 
-func fade_and_add_child(child_node: CanvasItem, duration: float = 0.5)->void:
+func fade_and_add_child(child_node: CanvasItem, duration: float = 0.3)->void:
 	if not is_instance_valid(child_node):
 		return
 		
@@ -75,8 +75,8 @@ func fade_and_add_child(child_node: CanvasItem, duration: float = 0.5)->void:
 	tween.tween_property(child_node, "modulate:a", 1.0, duration)
 	
 func on_file_closed()->void:
-		s_bkg.transition_to_background(s_bkg.bkgt1)
-		switch_sub_scene(scene_a)
+	s_bkg.transition_to_background(s_bkg.bkgt1)
+	switch_sub_scene(scene_a)
 
 func on_audio_opened()->void:
 	s_bkg.transition_to_background(s_bkg.bkgt2)

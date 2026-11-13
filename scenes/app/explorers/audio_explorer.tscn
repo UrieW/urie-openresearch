@@ -3,6 +3,7 @@
 [ext_resource type="StyleBox" uid="uid://dov5ojj1ufpxr" path="res://shaders/windowstyle1.tres" id="1_0hf8j"]
 [ext_resource type="Script" uid="uid://c2ylmyc8k1fu3" path="res://scripts/app/explorers/audio_explorer.gd" id="1_28xxt"]
 [ext_resource type="Texture2D" uid="uid://bwa3msuvn7svo" path="res://assets/gfx/gui/icons/Play Button.png" id="3_7gg5r"]
+[ext_resource type="StyleBox" uid="uid://bqilpxgdm5krp" path="res://shaders/btn_hover.tres" id="3_28xxt"]
 [ext_resource type="StyleBox" uid="uid://cvrfqbdsejgwl" path="res://shaders/media_player.tres" id="4_0jdy3"]
 
 [node name="audioexplorer" type="Control" unique_id=1777768152]
@@ -54,33 +55,33 @@ offset_right = -40.920013
 [node name="dbtn" type="Button" parent="title/filctrls" unique_id=349296210]
 texture_filter = 1
 layout_mode = 2
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("3_28xxt")
+theme_override_styles/focus = ExtResource("3_28xxt")
 text = "  !  "
 
 [node name="tbtn" type="Button" parent="title/filctrls" unique_id=223408530]
 texture_filter = 1
 layout_mode = 2
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("3_28xxt")
+theme_override_styles/focus = ExtResource("3_28xxt")
 text = "  T  "
 
 [node name="closebtn" type="Button" parent="title/filctrls" unique_id=64836342]
 texture_filter = 1
 layout_mode = 2
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("3_28xxt")
+theme_override_styles/focus = ExtResource("3_28xxt")
 text = "Close"
 
 [node name="vbtn" type="Button" parent="title/filctrls" unique_id=478778081]
 texture_filter = 1
 layout_mode = 2
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("3_28xxt")
+theme_override_styles/focus = ExtResource("3_28xxt")
 text = "  V  "
 
 [node name="explorer" type="Panel" parent="." unique_id=1962162731]
@@ -105,9 +106,8 @@ anchor_bottom = 0.68600005
 offset_left = -0.2000122
 offset_top = 0.109996796
 offset_bottom = -0.036010742
-focus_mode = 0
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
+theme_override_styles/hover = ExtResource("3_28xxt")
+theme_override_styles/focus = ExtResource("3_28xxt")
 icon = ExtResource("3_7gg5r")
 flat = true
 expand_icon = true
@@ -150,7 +150,6 @@ offset_left = -0.0950017
 offset_top = 0.004000187
 offset_right = 1.0
 offset_bottom = 1.0
-focus_mode = 0
 theme_override_styles/slider = ExtResource("4_0jdy3")
 
 [node name="iteminfo" type="Panel" parent="." unique_id=1443439172]

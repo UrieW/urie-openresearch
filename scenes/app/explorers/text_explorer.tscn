@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ct2p3d4cju70b" path="res://scripts/app/explorers/text_explorer.gd" id="1_qv0mg"]
 [ext_resource type="StyleBox" uid="uid://dov5ojj1ufpxr" path="res://shaders/windowstyle1.tres" id="1_u1tf7"]
 [ext_resource type="PackedScene" uid="uid://46wjay2vvumn" path="res://scenes/ui/windows/txt_subinfo.tscn" id="3_7gvft"]
+[ext_resource type="StyleBox" uid="uid://bqilpxgdm5krp" path="res://shaders/btn_hover.tres" id="3_u3kux"]
 
 [node name="textexplorer" type="Control" unique_id=1777768152]
 layout_mode = 3
@@ -68,23 +69,23 @@ offset_bottom = -0.007003784
 
 [node name="dbtn" type="Button" parent="controls/pgctrls" unique_id=445624438]
 layout_mode = 2
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("3_u3kux")
+theme_override_styles/focus = ExtResource("3_u3kux")
 text = "  !  "
 
 [node name="tbtn" type="Button" parent="controls/pgctrls" unique_id=132204534]
 layout_mode = 2
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("3_u3kux")
+theme_override_styles/focus = ExtResource("3_u3kux")
 text = "  T  "
 
 [node name="back" type="Button" parent="controls/pgctrls" unique_id=1005093998]
 layout_mode = 2
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("3_u3kux")
+theme_override_styles/focus = ExtResource("3_u3kux")
 text = "<    "
 
 [node name="page" type="Label" parent="controls/pgctrls" unique_id=638330188]
@@ -94,23 +95,23 @@ text = "0"
 
 [node name="next" type="Button" parent="controls/pgctrls" unique_id=1118221396]
 layout_mode = 2
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("3_u3kux")
+theme_override_styles/focus = ExtResource("3_u3kux")
 text = "    >"
 
 [node name="votebtn" type="Button" parent="controls/pgctrls" unique_id=341749545]
 layout_mode = 2
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("3_u3kux")
+theme_override_styles/focus = ExtResource("3_u3kux")
 text = "  V  "
 
 [node name="close" type="Button" parent="controls/pgctrls" unique_id=354401088]
 layout_mode = 2
-theme_override_colors/icon_focus_color = Color(1, 1, 0.21176471, 0.5176471)
-theme_override_colors/icon_hover_color = Color(1, 1, 0.21176471, 0.5176471)
 theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("3_u3kux")
+theme_override_styles/focus = ExtResource("3_u3kux")
 text = "Close"
 
 [node name="subinfo" type="Panel" parent="." unique_id=1364928745]

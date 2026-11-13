@@ -23,5 +23,12 @@ func _input(event: InputEvent) -> void:
 		if current_page < TOTAL_PAGES:
 			smooth_scroll_to(current_page * PAGE_WIDTH)
 		else:
-			queue_free()
-		accept_event()
+			smooth_fade_to_and_kill(0)
+		get_viewport().set_input_as_handled()
+
+func smooth_fade_to_and_kill(op: int, duration: float = 0.3) -> void:
+	var tween := create_tween()
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "modulate:a", op, duration)
+	tween.finished.connect(queue_free)

@@ -11,7 +11,7 @@ extends Control
 @onready var vote_btn:Button = $controls/pgctrls/votebtn
 @onready var exit_btn:Button = $controls/pgctrls/close
 
-@onready var c_report: ReportData = Globals.current_report
+@onready var c_report: TxtReportData = Globals.current_report
 
 var b_text: Array[String]
 var page_count: int = 0
@@ -30,8 +30,29 @@ func _ready() -> void:
 #	vote_btn.pressed.connect(show_voting_page)
 	exit_btn.pressed.connect(close_doc)
 	
-	next_btn.grab_focus.call_deferred()
+	if c_report.pages > 1:
+		next_btn.grab_focus.call_deferred()
+	else:
+		exit_btn.grab_focus.call_deferred()
+		
+	for i in pg_ctrls.get_children():
+		if i is Button:
+			i.focus_neighbor_bottom = i.get_path()
+			i.focus_neighbor_top = i.get_path()
 
+	dbtn.focus_neighbor_left = exit_btn.get_path()
+	dbtn.focus_neighbor_right = tbtn.get_path()
+	tbtn.focus_neighbor_left = dbtn.get_path()
+	tbtn.focus_neighbor_right = back_btn.get_path()
+	back_btn.focus_neighbor_left = tbtn.get_path()
+	back_btn.focus_neighbor_right = next_btn.get_path()
+	next_btn.focus_neighbor_left = back_btn.get_path()
+	next_btn.focus_neighbor_right = vote_btn.get_path()
+	vote_btn.focus_neighbor_left = next_btn.get_path()
+	vote_btn.focus_neighbor_right = exit_btn.get_path()
+	exit_btn.focus_neighbor_left = vote_btn.get_path()
+	exit_btn.focus_neighbor_right = dbtn.get_path()
+	
 func load_report(report: TxtReportData) -> void:
 	body.scroll_active = false
 	body.clip_contents = true
@@ -66,32 +87,10 @@ func show_page(report: TxtReportData, page_index: int) -> void:
 	report.current_page = clampi(page_index - 1, 0, page_scroll_offsets.size() - 1)
 	body.get_v_scroll_bar().value = page_scroll_offsets[report.current_page]
 	
-func _gui_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_left"):
-		for i in pg_ctrls.get_children():
-			if i.has_focus():
-				if i.get_index() > 0:
-					pg_ctrls.get_child(i.get_index() - 1).grab_focus.call_deferred()
-				else:
-					pg_ctrls.get_child(pg_ctrls.get_child_count() - 1).grab_focus.call_deferred()
-		accept_event()
-				
-	if event.is_action_pressed("ui_right"):
-		for i in pg_ctrls.get_children():
-			if i.has_focus():
-				if i.get_index() < pg_ctrls.get_child_count() - 1:
-					pg_ctrls.get_child(i.get_index() + 1).grab_focus.call_deferred()
-				else:
-					pg_ctrls.get_child(0).grab_focus.call_deferred()
-		accept_event()
-	
-	if event.is_action_pressed("ui_cancel"):
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_textexp_escape"):
 		close_doc()
-		accept_event()
-	
-func _on_timer_timeout() -> void:
-	print("Timer finished!")
-	next_page()
+		get_viewport().set_input_as_handled()
 	
 func next_page() -> void:
 	if page_count >= c_report.pages:

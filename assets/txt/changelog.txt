@@ -179,4 +179,17 @@ a script, as i just learned and jotted a TON!!!!!!!
 vars are extremely important to add, fixed disclaimer scene, now to fully
 add it...
 11/13 - added a panel as disclaimer's top child, even more input map vars
-
+11/13 - pruned and fixed all code, didn't know that godot defaults ALL
+pad input to ui direction buttons and buttons can automatically focus on
+other buttons, by changing their directional focus neighbor targets,
+fixed file explorer, at last, XD, fixed all button focusing, by changing
+the focus and hover styles of all buttons, now i have to fix all the 
+focus neighbor targets of the buttons in the other explorers, and fix all
+button triggers' tree exits, of all rest of the explorers, which should be
+no feat at all...
+11/13 - fixed all explorers, didn't know, that i can seek audio values
+without manual ui controls, if i make a signal and its matching command
+and link signal to it, fixed all explorer buttons, now to make the trigger
+scenes, link them to the buttons and make tree exit focus code for all
+the explorers, the last one, the tree exit focus should be a 
+no-brainer...

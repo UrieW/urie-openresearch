@@ -35,7 +35,6 @@ func _ready()->void:
 	nxt_btn.pressed.connect(next_page)
 #	ea_btn.pressed.connect(exit_explorer)
 	
-	
 func set_items(new_items: Array) -> void:
 	all_items = new_items
 	total_pages = int(ceil(float(all_items.size()) / items_per_page))
@@ -56,72 +55,20 @@ func grid_focus_first_item():
 		elif first_child is Button:
 			first_child.grab_focus()
 			
-func hbox_focus_first_item():
-	if navbox.get_child_count() > 0:
-		var first_child = navbox.get_child(0)
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_file_exp_folderescape"):
+		# Wait for the fade-out (0.5s) PLUS your custom delay before continuing
+		#await get_tree().create_timer(0.3).timeout
 		
-		# If your child is a custom Scene container holding a button:
-		if first_child.has_node("ae"):
-			first_child.get_node("ae").grab_focus()
-			
-		# If the child itself is the Button node:
-		elif first_child is Button:
-			first_child.grab_focus()
+		if Globals.current_dir == "res://reports": #or Input.is_action_pressed("ui_cancel"):			
+			exit_explorer()
+		else:
+			exit_folder()
+		get_viewport().set_input_as_handled()
 	
-func focus_grid_index(index: int):
-	if index < file_grid.get_child_count():
-		var target_button = file_grid.get_child(index) as Button
-		if target_button:
-			target_button.grab_focus.call_deferred()
-			
-func focus_navbox_index(index: int):
-	if index < navbox.get_child_count():
-		if navbox.get_child(index) is Label:
-			return
-		var target_button = navbox.get_child(index) as Button
-		if target_button:
-			target_button.grab_focus.call_deferred()
-			
-func _gui_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_up"):
-		for i in file_grid.get_children():
-			if file_grid.get_child_count() > 6:
-				file_grid.get_child(7).grab_focus.call_deferred()
-			elif file_grid.get_child_count() > 12:
-				file_grid.get_child(13).grab_focus.call_deferred()
-			else:
-				navbox.get_child(0).grab_focus.call_deferred()
-		accept_event()
-	
-	if event.is_action_pressed("ui_down"):
-		for i in file_grid.get_children():
-			if file_grid.get_child_count() > 6:
-				file_grid.get_child(1).grab_focus.call_deferred()
-			elif file_grid.get_child_count() > 12:
-				file_grid.get_child(6).grab_focus.call_deferred()
-			else:
-				navbox.get_child(0).grab_focus.call_deferred()
-		accept_event()
-				
-	if event.is_action_pressed("ui_left"):
-		for i in file_grid.get_children():
-			if i.get_index() > 0:
-				file_grid.get_child(i.get_index() -1).grab_focus.call_deferred()
-			else:
-				navbox.get_child(navbox.get_child_count()-1).grab_focus.call_deferred()
-		accept_event()
-		
-	if event.is_action_pressed("ui_right"):
-		for i in file_grid.get_children():
-			if i.get_index() < file_grid.get_child_count() - 1:
-				file_grid.get_child(i.get_index() +1).grab_focus.call_deferred()
-			else:
-				navbox.get_child(0).grab_focus.call_deferred()
-		accept_event()
-		
-#	if event.is_action_pressed("ui_cancel"):
-#		exit_explorer()
-#		accept_event()
+	if event.is_action_pressed("ui_mainapp_escape"):
+		exit_explorer()
+		get_viewport().set_input_as_handled()
 
 func set_items_by_path(path_str: String) -> void:	
 	var dir = DirAccess.open(path_str)
@@ -164,12 +111,13 @@ func set_items_by_path(path_str: String) -> void:
 	set_items(result)
 
 func show_page(page: int) -> void:
-	current_page = clampi(page, 0, total_pages-1)
+	current_page = clampi(page, 0, max(0, total_pages - 1))
+	page_label.text = str(current_page + 1) # Update label on every page turn
 	
 	# Clear current children in grid
 	for child in file_grid.get_children():
 		file_grid.remove_child(child)
-		child.hide()
+		child.queue_free()
 	
 	# Calculate slice range
 	var start = current_page * items_per_page
@@ -196,6 +144,26 @@ func show_page(page: int) -> void:
 		
 		folder_item_button.show()
 		
+	# Add this at the end of show_page() after adding all folder_item_button children:
+	var children = file_grid.get_children()
+	for idx in range(children.size()):
+		var btn: Control = children[idx]
+		var last_btn: Control = children[-1]
+		last_btn.focus_neighbor_right = ae_btn.get_path()
+		last_btn.focus_neighbor_bottom = ae_btn.get_path()
+		ae_btn.focus_neighbor_left = last_btn.get_path()
+		
+		# If this button is in the bottom row (no item 5 slots below it), point Down to navbox
+		if idx + file_grid.columns >= children.size():
+			btn.focus_neighbor_bottom = ae_btn.get_path()
+			
+	# Point navbox buttons Up back to the first grid item (or last grid item)
+	if children.size() > 0:
+		for nav_child in navbox.get_children():
+			if nav_child is Button:
+				nav_child.focus_neighbor_top = children[0].get_path()
+
+		
 func show_report_info(target: Button) -> void:
 	item_info.text = target.s3text
 	var report = target.get_node("reportslot").report
@@ -217,11 +185,11 @@ func erase_report_info(target:Button)->void:
 		sub_info.hide()
 		
 func next_page() -> void:
-	if current_page < total_pages:
+	if current_page < total_pages - 1:
 		show_page(current_page + 1)
 
 func prev_page() -> void:
-	if current_page > 1:
+	if current_page > 0:
 		show_page(current_page - 1)
 
 #func show_ae_menu()->void:

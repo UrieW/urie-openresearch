@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b3r747kja5dfy"]
 
+[ext_resource type="StyleBox" uid="uid://bqilpxgdm5krp" path="res://shaders/btn_hover.tres" id="1_fvyy6"]
 [ext_resource type="Texture2D" uid="uid://clvjsuwe5e7gl" path="res://assets/gfx/gui/icons/akar-icons-file/akar-icons--file.png" id="1_pj11l"]
 [ext_resource type="Script" uid="uid://b440ypl2hyaxx" path="res://scripts/base/ui/buttons/icons/exploreitem.gd" id="2_peaxk"]
 [ext_resource type="Script" uid="uid://cgw1jii8eqov4" path="res://scripts/base/ui/buttons/triggers/reportslot.gd" id="3_i52o5"]
@@ -8,12 +9,6 @@
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnbfn"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wehsb"]
-bg_color = Color(1, 1, 0.21176471, 0.5176471)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncge8"]
-bg_color = Color(1, 1, 0.21176471, 0.5176471)
 
 [node name="exploreitem" type="Button" unique_id=1069751783]
 texture_filter = 1
@@ -27,8 +22,8 @@ theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
 theme_override_constants/icon_max_width = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_i52o5")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fnbfn")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wehsb")
-theme_override_styles/focus = SubResource("StyleBoxFlat_ncge8")
+theme_override_styles/hover = ExtResource("1_fvyy6")
+theme_override_styles/focus = ExtResource("1_fvyy6")
 icon = ExtResource("1_pj11l")
 script = ExtResource("2_peaxk")
 
