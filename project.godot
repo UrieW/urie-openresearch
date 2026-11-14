@@ -15,6 +15,7 @@ general/updates_per_second=36
 [application]
 
 config/name="Urie's Open Research"
+run/main_scene="uid://c7adxtkuqioqq"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

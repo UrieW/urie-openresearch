@@ -23,7 +23,7 @@ signal file_closed
 
 func _ready() -> void:
 	# Configure slider step for native arrow-key seeking
-	time_slider.step = keyboard_seek_step
+	time_slider.step = 0.01
 	time_slider.value_changed.connect(_on_slider_value_changed)
 	
 	audio_player.stream = load(Globals.current_report.file)
@@ -74,7 +74,20 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_audioexp_escape"):
 		close_doc()
 		get_viewport().set_input_as_handled()
-	
+	elif time_slider.has_focus():
+		if event.is_action_pressed("ui_right"):
+			_seek_relative(keyboard_seek_step)
+			get_viewport().set_input_as_handled()
+		elif event.is_action_pressed("ui_left"):
+			_seek_relative(-keyboard_seek_step)
+			get_viewport().set_input_as_handled()
+			
+func _seek_relative(offset: float) -> void:
+	var target = clamp(audio_player.get_playback_position() + offset, 0.0, time_slider.max_value)
+	audio_player.seek(target)
+	time_slider.set_value_no_signal(target)
+	current_time_lbl.text = _format_time(target)
+
 func setup_labels() -> void:
 	cd_name_label.text  = Globals.current_report.title
 	
@@ -82,7 +95,7 @@ func _process(_delta: float) -> void:
 	# FIX: Update slider value and time label when playing and NOT dragging
 	if audio_player.playing and not is_user_dragging:
 		var current_time = audio_player.get_playback_position()
-		time_slider.value = current_time
+		time_slider.set_value_no_signal(current_time)
 		current_time_lbl.text = _format_time(current_time)
 	
 	# FIX: If the user IS dragging, update text label to show real-time target timestamp 

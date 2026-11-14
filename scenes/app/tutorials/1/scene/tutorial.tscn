@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dhvpdrffajm0"]
+
+[node name="tutorial" type="Control" unique_id=723586073]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="Panel" type="Panel" parent="." unique_id=1429373262]
+layout_mode = 1
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="scrolls" type="ScrollContainer" parent="." unique_id=1527635286]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 75.0
+offset_right = 456.0
+offset_bottom = 340.0
+
+[node name="vbox" type="VBoxContainer" parent="scrolls" unique_id=1168414619]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="margs1" type="MarginContainer" parent="scrolls/vbox" unique_id=1044014118]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Button" type="Button" parent="scrolls/vbox/margs1" unique_id=1010391996]
+layout_mode = 2
