@@ -29,7 +29,7 @@ func _ready() -> void:
 	audio_player.stream = load(Globals.current_report.file)
 	setup_labels()
 	dbtn.pressed.connect(show_disclaimer)
-#	tbtn.pressed.connect(show_tutorial)
+	tbtn.pressed.connect(show_tutorial)
 	close_btn.pressed.connect(close_doc)
 #	vbtn.pressed.connect(show_voting_panel)
 	
@@ -71,7 +71,7 @@ func _ready() -> void:
 	vbtn.focus_neighbor_right = dbtn.get_path()
 					
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_audioexp_escape"):
+	if event.is_action_pressed("ui_cancel"):
 		close_doc()
 		get_viewport().set_input_as_handled()
 	elif time_slider.has_focus():
@@ -156,10 +156,10 @@ func show_disclaimer():
 	var disclaimer: Control = DISCLAIMERPRELOAD.instantiate()	
 	add_child(disclaimer)
 	
-#func show_tutorial():
-#	var TUTORIALPRELOAD: PackedScene = preload()
-#	var tutorial: Control = TUTORIALPRELOAD.instantiate()
-#	add_child(tutorial3)
+func show_tutorial():
+	var TUTORIALPRELOAD: PackedScene = preload("res://scenes/app/tutorials/2/scene/tutorial2.tscn")
+	var tutorial: Control = TUTORIALPRELOAD.instantiate()
+	add_child(tutorial)
 	
 
 #func show_voting_panel():

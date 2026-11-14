@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://vgdvu3vwewbn"]
+
+[ext_resource type="StyleBox" uid="uid://cpwrhl42uw007" path="res://shaders/windowstyle2.tres" id="1_s0vlm"]
+
+[node name="scrolls" type="ScrollContainer" unique_id=2033821665]
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 620.0
+offset_bottom = 330.0
+size_flags_horizontal = 3
+offset_transform_enabled = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="clips" type="HBoxContainer" parent="." unique_id=9255534]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="mainmargs1" type="MarginContainer" parent="clips" unique_id=811018078]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs1" unique_id=1352511184]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_s0vlm")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs1/panel1" unique_id=438947209]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs1/panel1/panelmargs" unique_id=38313169]
+layout_mode = 2
+
+[node name="text" type="RichTextLabel" parent="clips/mainmargs1/panel1/panelmargs/vbox" unique_id=273011727]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 8
+text = "any dpad/stick direction: navigate
+z/b/x: exit folder/app
+x/a/circle: accept
+escape key: exit app"
+
+[node name="prompt" type="Label" parent="clips/mainmargs1/panel1/panelmargs/vbox" unique_id=515893457]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Close"
+horizontal_alignment = 1

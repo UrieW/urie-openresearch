@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://d0wwv7vpgey03"]
+
+[ext_resource type="StyleBox" uid="uid://r3c02sm7cdey" path="res://shaders/app_event.tres" id="1_hkken"]
+[ext_resource type="StyleBox" uid="uid://bqilpxgdm5krp" path="res://shaders/btn_hover.tres" id="2_ggk0e"]
+
+[node name="scrolls" type="ScrollContainer" unique_id=189245560]
+custom_minimum_size = Vector2(275, 275)
+offset_left = 180.0
+offset_top = 75.0
+offset_right = 455.0
+offset_bottom = 350.0
+
+[node name="vbox" type="VBoxContainer" parent="." unique_id=1428852666]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 4
+
+[node name="margs1" type="MarginContainer" parent="vbox" unique_id=945873253]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 13
+
+[node name="Panel" type="Panel" parent="vbox/margs1" unique_id=1055143536]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_hkken")
+
+[node name="Button" type="Button" parent="vbox/margs1/Panel" unique_id=1971127341]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("2_ggk0e")
+theme_override_styles/focus = ExtResource("2_ggk0e")
+text = "Command Info"
+flat = true
+expand_icon = true
+
+[node name="margs2" type="MarginContainer" parent="vbox" unique_id=286356207]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 13
+
+[node name="Panel" type="Panel" parent="vbox/margs2" unique_id=591497290]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_hkken")
+
+[node name="Button" type="Button" parent="vbox/margs2/Panel" unique_id=616102068]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("2_ggk0e")
+theme_override_styles/focus = ExtResource("2_ggk0e")
+text = "Scene Details"
+flat = true
+expand_icon = true
+
+[node name="margs3" type="MarginContainer" parent="vbox" unique_id=1164901872]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 13
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 13
+
+[node name="Panel" type="Panel" parent="vbox/margs3" unique_id=275333630]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_hkken")
+
+[node name="Button" type="Button" parent="vbox/margs3/Panel" unique_id=1876831738]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+theme_override_styles/hover = ExtResource("2_ggk0e")
+theme_override_styles/focus = ExtResource("2_ggk0e")
+text = "Close"
+flat = true
+expand_icon = true

@@ -29,7 +29,7 @@ func _ready()->void:
 	set_items_by_path.call_deferred(Globals.current_dir)
 #	ae_btn.pressed.connect(show_ae_menu)
 	d_btn.pressed.connect(show_disclaimer)
-#	t_btn.pressed.connect(show_tutorial)
+	t_btn.pressed.connect(show_tutorial)
 	fe_btn.pressed.connect(exit_folder)
 	back_btn.pressed.connect(prev_page)
 	nxt_btn.pressed.connect(next_page)
@@ -56,7 +56,7 @@ func grid_focus_first_item():
 			first_child.grab_focus()
 			
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_file_exp_folderescape"):
+	if event.is_action_pressed("ui_cancel"):
 		# Wait for the fade-out (0.5s) PLUS your custom delay before continuing
 		#await get_tree().create_timer(0.3).timeout
 		
@@ -202,10 +202,10 @@ func show_disclaimer()->void:
 	var disclaimer:Control = DISCLAIMERPRELOAD.instantiate()
 	add_child(disclaimer)
 
-#func show_tutorial()->void:
-#	var TUTORIALPRELOAD: PackedScene = preload()
-#	var tutorial: Control = TUTORIALPRELOAD.instantiate()
-#	get_tree().current_scene.add_child(tutorial)
+func show_tutorial()->void:
+	var TUTORIALPRELOAD: PackedScene = preload("res://scenes/app/tutorials/1/scene/tutorial1.tscn")
+	var tutorial: Control = TUTORIALPRELOAD.instantiate()
+	add_child(tutorial)
 
 func exit_folder()->void:
 	if Globals.current_dir == "res://reports":

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cg6aekuc5laj4"]
+
+[ext_resource type="Script" uid="uid://bi6hlwlbb737h" path="res://scripts/app/tutorials/2/scene/tutorial2.gd" id="1_h21es"]
+[ext_resource type="PackedScene" uid="uid://d0wwv7vpgey03" path="res://scenes/app/tutorials/2/app menu/app_menu.tscn" id="2_wyi0x"]
+
+[node name="tutorial2" type="Control" unique_id=723586073]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_h21es")
+
+[node name="Panel" type="Panel" parent="." unique_id=1429373262]
+layout_mode = 1
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="Label" type="Label" parent="." unique_id=1896210444]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 33.0
+offset_right = 412.0
+offset_bottom = 53.0
+theme_override_constants/outline_size = 8
+text = "Pick a tutorial for the audio explorer."
+
+[node name="scrolls" parent="." unique_id=189245560 instance=ExtResource("2_wyi0x")]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 64.0
+offset_right = 452.0
+offset_bottom = 339.0

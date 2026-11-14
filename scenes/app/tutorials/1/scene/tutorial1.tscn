@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dhvpdrffajm0"]
+
+[ext_resource type="PackedScene" uid="uid://cqv5p3tyhix8w" path="res://scenes/app/tutorials/1/app menu/app_menu.tscn" id="1_7fnt4"]
+[ext_resource type="Script" uid="uid://bd3lnfy1u7map" path="res://scripts/app/tutorials/1/scene/tutorial1.gd" id="1_yjmhh"]
+
+[node name="tutorial" type="Control" unique_id=723586073]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_yjmhh")
+
+[node name="Panel" type="Panel" parent="." unique_id=1429373262]
+layout_mode = 1
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="Label" type="Label" parent="." unique_id=1555139298]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 33.0
+offset_right = 412.0
+offset_bottom = 53.0
+theme_override_constants/outline_size = 8
+text = "Pick a tutorial for the file explorer."
+
+[node name="scrolls" parent="." unique_id=189245560 instance=ExtResource("1_7fnt4")]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 78.0
+offset_right = 446.0
+offset_bottom = 353.0

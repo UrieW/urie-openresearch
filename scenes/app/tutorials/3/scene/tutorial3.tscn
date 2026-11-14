@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ehubml52qq2u"]
+
+[ext_resource type="Script" uid="uid://cy7wfgjh6b8sr" path="res://scripts/app/tutorials/3/scene/tutorial3.gd" id="1_7sbo2"]
+[ext_resource type="PackedScene" uid="uid://oh57yjxape3p" path="res://scenes/app/tutorials/3/app menu/app_menu.tscn" id="2_7xilc"]
+
+[node name="tutorial" type="Control" unique_id=723586073]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_7sbo2")
+
+[node name="Panel" type="Panel" parent="." unique_id=1429373262]
+layout_mode = 1
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="Label" type="Label" parent="." unique_id=1034354541]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 33.0
+offset_right = 412.0
+offset_bottom = 53.0
+theme_override_constants/outline_size = 8
+text = "Pick a tutorial for the text explorer."
+
+[node name="scrolls" parent="." unique_id=189245560 instance=ExtResource("2_7xilc")]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 63.0
+offset_right = 446.0
+offset_bottom = 338.0

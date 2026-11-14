@@ -1,0 +1,511 @@
+[gd_scene format=3 uid="uid://bqesbs17nhxnx"]
+
+[ext_resource type="StyleBox" uid="uid://cpwrhl42uw007" path="res://shaders/windowstyle2.tres" id="1_5ex4s"]
+[ext_resource type="Texture2D" uid="uid://c545rupwgbl48" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 1.png" id="2_5irvy"]
+[ext_resource type="Texture2D" uid="uid://cswmicjewr7ay" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 2.png" id="3_27b7y"]
+[ext_resource type="Texture2D" uid="uid://h4bj8xl2h8na" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 3.png" id="4_2cxir"]
+[ext_resource type="Texture2D" uid="uid://cj2qgct5wiceq" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 4.png" id="5_ogi51"]
+[ext_resource type="Texture2D" uid="uid://c5j4eu0pi42ik" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 5.png" id="6_qv656"]
+[ext_resource type="Texture2D" uid="uid://byref35i16b8" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 6.png" id="7_elxwt"]
+[ext_resource type="Texture2D" uid="uid://cv7sxnipi5xkp" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 7.png" id="8_wsu2p"]
+[ext_resource type="Texture2D" uid="uid://7u12cvoqsx3r" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 8.png" id="9_2tc7t"]
+[ext_resource type="Texture2D" uid="uid://blqh3d2651m3d" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 9.png" id="10_k5vbc"]
+[ext_resource type="Texture2D" uid="uid://i8i2201qth7g" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 10.png" id="11_7iw7f"]
+[ext_resource type="Texture2D" uid="uid://4apbtaysvvng" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 11.png" id="12_r0f5a"]
+[ext_resource type="Texture2D" uid="uid://dfv14pkx2a7nh" path="res://assets/gfx/gui/tutorials/templates/file explorer/example 12.png" id="13_vhxfh"]
+
+[node name="scrolls" type="ScrollContainer" unique_id=2033821665]
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 620.0
+offset_bottom = 330.0
+size_flags_horizontal = 3
+offset_transform_enabled = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+
+[node name="clips" type="HBoxContainer" parent="." unique_id=9255534]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="mainmargs1" type="MarginContainer" parent="clips" unique_id=811018078]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs1" unique_id=1352511184]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs1/panel1" unique_id=438947209]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs1/panel1/panelmargs" unique_id=38313169]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs1/panel1/panelmargs/vbox" unique_id=826068651]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_5irvy")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs1/panel1/panelmargs/vbox" unique_id=515893457]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs1/panel1/panelmargs/vbox" unique_id=1073545211]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "1 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs2" type="MarginContainer" parent="clips" unique_id=408335937]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs2" unique_id=1077478596]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs2/panel1" unique_id=760171638]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs2/panel1/panelmargs" unique_id=274320601]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs2/panel1/panelmargs/vbox" unique_id=748150161]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_27b7y")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs2/panel1/panelmargs/vbox" unique_id=535652169]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs2/panel1/panelmargs/vbox" unique_id=300512025]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "2 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs3" type="MarginContainer" parent="clips" unique_id=678249219]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs3" unique_id=1574458499]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs3/panel1" unique_id=748590424]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs3/panel1/panelmargs" unique_id=1674523514]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs3/panel1/panelmargs/vbox" unique_id=22573548]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_2cxir")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs3/panel1/panelmargs/vbox" unique_id=1499313113]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs3/panel1/panelmargs/vbox" unique_id=1913577714]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "3 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs4" type="MarginContainer" parent="clips" unique_id=1306390308]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs4" unique_id=795352891]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs4/panel1" unique_id=662725930]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs4/panel1/panelmargs" unique_id=2130729584]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs4/panel1/panelmargs/vbox" unique_id=1100973965]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_ogi51")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs4/panel1/panelmargs/vbox" unique_id=1223019724]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs4/panel1/panelmargs/vbox" unique_id=1244561725]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "4 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs5" type="MarginContainer" parent="clips" unique_id=1911493292]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs5" unique_id=614704714]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs5/panel1" unique_id=498846420]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs5/panel1/panelmargs" unique_id=588909382]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs5/panel1/panelmargs/vbox" unique_id=2013788550]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_qv656")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs5/panel1/panelmargs/vbox" unique_id=439152776]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs5/panel1/panelmargs/vbox" unique_id=647623468]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "5 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs6" type="MarginContainer" parent="clips" unique_id=1056586407]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs6" unique_id=1888517032]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs6/panel1" unique_id=1964831245]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs6/panel1/panelmargs" unique_id=291171756]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs6/panel1/panelmargs/vbox" unique_id=1083277672]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_elxwt")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs6/panel1/panelmargs/vbox" unique_id=744918496]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs6/panel1/panelmargs/vbox" unique_id=1659835627]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "6 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs7" type="MarginContainer" parent="clips" unique_id=87022854]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs7" unique_id=88731090]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs7/panel1" unique_id=1027704640]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs7/panel1/panelmargs" unique_id=1835072127]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs7/panel1/panelmargs/vbox" unique_id=1753053431]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("8_wsu2p")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs7/panel1/panelmargs/vbox" unique_id=530841385]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs7/panel1/panelmargs/vbox" unique_id=91553964]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "7 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs8" type="MarginContainer" parent="clips" unique_id=2142019951]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs8" unique_id=1204734601]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs8/panel1" unique_id=1726078775]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs8/panel1/panelmargs" unique_id=1145394266]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs8/panel1/panelmargs/vbox" unique_id=1833513700]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("9_2tc7t")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs8/panel1/panelmargs/vbox" unique_id=1834253003]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs8/panel1/panelmargs/vbox" unique_id=500913797]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "8 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs9" type="MarginContainer" parent="clips" unique_id=1728736309]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs9" unique_id=754046111]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs9/panel1" unique_id=119393879]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs9/panel1/panelmargs" unique_id=467134167]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs9/panel1/panelmargs/vbox" unique_id=833738217]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("10_k5vbc")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs9/panel1/panelmargs/vbox" unique_id=1305727550]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs9/panel1/panelmargs/vbox" unique_id=1789133521]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "9 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs10" type="MarginContainer" parent="clips" unique_id=1998762931]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs10" unique_id=230729728]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs10/panel1" unique_id=591815871]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs10/panel1/panelmargs" unique_id=715234150]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs10/panel1/panelmargs/vbox" unique_id=1792455263]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("11_7iw7f")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs10/panel1/panelmargs/vbox" unique_id=2003024851]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs10/panel1/panelmargs/vbox" unique_id=1264958392]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "10 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs11" type="MarginContainer" parent="clips" unique_id=122636373]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs11" unique_id=1751849060]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs11/panel1" unique_id=1755936258]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs11/panel1/panelmargs" unique_id=895620542]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs11/panel1/panelmargs/vbox" unique_id=79477553]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("12_r0f5a")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs11/panel1/panelmargs/vbox" unique_id=758898168]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs11/panel1/panelmargs/vbox" unique_id=828381196]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "11 of 12"
+horizontal_alignment = 1
+
+[node name="mainmargs12" type="MarginContainer" parent="clips" unique_id=1558096096]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="panel1" type="Panel" parent="clips/mainmargs12" unique_id=832924009]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("1_5ex4s")
+
+[node name="panelmargs" type="MarginContainer" parent="clips/mainmargs12/panel1" unique_id=681096416]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 300.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="vbox" type="VBoxContainer" parent="clips/mainmargs12/panel1/panelmargs" unique_id=1599460453]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="clips/mainmargs12/panel1/panelmargs/vbox" unique_id=623040020]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13_vhxfh")
+expand_mode = 1
+
+[node name="prompt" type="Label" parent="clips/mainmargs12/panel1/panelmargs/vbox" unique_id=1583506306]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Press or Click to Advance"
+horizontal_alignment = 1
+
+[node name="panum" type="Label" parent="clips/mainmargs12/panel1/panelmargs/vbox" unique_id=569508595]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "12 of 12"
+horizontal_alignment = 1

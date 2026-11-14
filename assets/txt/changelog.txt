@@ -200,4 +200,14 @@ for the other buttons...
 11/13 - fixed a bug in audio explorer, about a constant 2s skip during 
 audio playback, being pressured to ramp up production, and again, to 
 rest on Sabbath, despite what VERY EVIL things I was told...
+11/14 - started adding tutorial scenes, by making them out of reused
+disclaimer scenes, made and added tutorial page images, took 5 brutal hours,
+worth it...*temporary collapse*
+11/14 - added all tutorial assets and activated them, Hallelujah, now
+there's a few pic mistakes and feature surprise typos, as i got the voting
+panel and app escape menus left...
+11/14 - well, it seems that i have run into an inheritance bug with a set
+of app menu clones, and i've fully fixed the tutorials, with inkscape,
+even though, the text explorer was fine on its own, yeah...gotta report 
+that to the godot team...
 

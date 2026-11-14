@@ -24,7 +24,7 @@ func _ready() -> void:
 	$subinfo/textrows.show_report_info(c_report)
 	
 	dbtn.pressed.connect(show_disclaimer)
-#	t_btn.pressed.connect(show_tutorial)
+	tbtn.pressed.connect(show_tutorial)
 	back_btn.pressed.connect(prev_page)
 	next_btn.pressed.connect(next_page)
 #	vote_btn.pressed.connect(show_voting_page)
@@ -88,7 +88,7 @@ func show_page(report: TxtReportData, page_index: int) -> void:
 	body.get_v_scroll_bar().value = page_scroll_offsets[report.current_page]
 	
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_textexp_escape"):
+	if event.is_action_pressed("ui_cancel"):
 		close_doc()
 		get_viewport().set_input_as_handled()
 	
@@ -113,10 +113,10 @@ func show_disclaimer():
 	var disclaimer: Control = DISCLAIMERPRELOAD.instantiate()
 	add_child(disclaimer)
 
-#func show_tutorial():
-#	var TUTORIALPRELOAD: PackedScene = preload()
-#	var tutorial: Control = TUTORIALPRELOAD.instantiate()
-#	get_tree().current_scene.add_child(tutorial)
+func show_tutorial():
+	var TUTORIALPRELOAD: PackedScene = preload("res://scenes/app/tutorials/3/scene/tutorial3.tscn")
+	var tutorial: Control = TUTORIALPRELOAD.instantiate()
+	add_child(tutorial)
 	
 #func show_voting_page():
 #	var VOTINGPANELPRELOAD: PackedScene = preload()
