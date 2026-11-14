@@ -27,9 +27,8 @@ func _ready() -> void:
 	time_slider.value_changed.connect(_on_slider_value_changed)
 	
 	audio_player.stream = load(Globals.current_report.file)
-#	sbkg.transition_to_background(sbkg.bkgt3)
 	setup_labels()
-#	dbtn.pressed.connect(show_disclaimer)
+	dbtn.pressed.connect(show_disclaimer)
 #	tbtn.pressed.connect(show_tutorial)
 	close_btn.pressed.connect(close_doc)
 #	vbtn.pressed.connect(show_voting_panel)
@@ -70,7 +69,7 @@ func _ready() -> void:
 	close_btn.focus_neighbor_right = vbtn.get_path()
 	vbtn.focus_neighbor_left = close_btn.get_path()
 	vbtn.focus_neighbor_right = dbtn.get_path()
-	
+					
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_audioexp_escape"):
 		close_doc()
@@ -139,23 +138,18 @@ func close_doc():
 
 	file_closed.emit()
 
-#func show_disclaimer():
-#	if !focused:
-#		return
-		
-#	var DISCLAIMERPRELOAD: PackedScene = preload("res://scenes/app/disclaimer/disclaimer.tscn")
-#	var disclaimer: Control = DISCLAIMERPRELOAD.instantiate()	
-#	get_tree().current_scene.add_child(disclaimer)
-#	show_disclaimer()
+func show_disclaimer():	
+	var DISCLAIMERPRELOAD: PackedScene = preload("res://scenes/app/disclaimer/disclaimer.tscn")
+	var disclaimer: Control = DISCLAIMERPRELOAD.instantiate()	
+	add_child(disclaimer)
 	
 #func show_tutorial():
 #	var TUTORIALPRELOAD: PackedScene = preload()
 #	var tutorial: Control = TUTORIALPRELOAD.instantiate()
-#	get_tree().current_scene.add_child(tutorial3)
+#	add_child(tutorial3)
 	
 
 #func show_voting_panel():
 #	var VOTINGPANELPRELOAD: PackedScene = preload()
 #	var voting_panel: Control = VOTINGPANELPRELOAD.instantiate()
-#	get_tree().current_scene.add_child(voting_panel)
-#	voting_panel.unhide()
+#	add_child(voting_panel)

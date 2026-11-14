@@ -23,7 +23,7 @@ func _ready() -> void:
 	load_report(c_report)
 	$subinfo/textrows.show_report_info(c_report)
 	
-#	d_btn.pressed.connect(show_disclaimer)
+	dbtn.pressed.connect(show_disclaimer)
 #	t_btn.pressed.connect(show_tutorial)
 	back_btn.pressed.connect(prev_page)
 	next_btn.pressed.connect(next_page)
@@ -111,8 +111,7 @@ func prev_page() -> void:
 func show_disclaimer():
 	var DISCLAIMERPRELOAD: PackedScene = preload("res://scenes/app/disclaimer/disclaimer.tscn")
 	var disclaimer: Control = DISCLAIMERPRELOAD.instantiate()
-	get_tree().current_scene.add_child(disclaimer)
-#	show_disclaimer()
+	add_child(disclaimer)
 
 #func show_tutorial():
 #	var TUTORIALPRELOAD: PackedScene = preload()

@@ -8,6 +8,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 360.0
+focus_mode = 2
 script = ExtResource("1_i3cxg")
 
 [node name="Panel" type="Panel" parent="." unique_id=351984103]
@@ -66,7 +67,7 @@ The following media may or may not be real, very accurate or
 coincidental. It is told through a possibility of sheer experience or
 belief. DO NOT TAKE THIS AS ACTUAL ADVICE, AS IT'S RESEARCH BEING OPENLY 
 SOURCED. BY USING IT, THE AUTHOR HOLDS NO LIABILITY FOR ANYTHING 
-COMING OUT OF IT, WHATSOEVER. THE MEDIA IS BACKED BY THE MIT LICENSE."
+COMING OUT OF IT, WHATSOEVER. THE MEDIA IS BACKED BY THE MIT LICENSE. IF YOU'RE A KID, PLEASE GET AN ADULT FOR THIS, AND GET OUT OF THE APP, NOW!!!!!!!!!!!!"
 
 [node name="prompt" type="Label" parent="scrolls/clips/mainmargs1/panel1/panelmargs/vbox" unique_id=1034455573]
 layout_mode = 2

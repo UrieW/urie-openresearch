@@ -193,3 +193,7 @@ and link signal to it, fixed all explorer buttons, now to make the trigger
 scenes, link them to the buttons and make tree exit focus code for all
 the explorers, the last one, the tree exit focus should be a 
 no-brainer...
+11/13 - fully added the disclaimer to their original buttons, but first, i
+had to get the previous focus' owner in the disclaimer class, before
+switching it back after the kill, edited README.md, now i know what to do,
+for the other buttons...

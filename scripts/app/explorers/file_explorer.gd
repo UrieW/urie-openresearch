@@ -28,7 +28,7 @@ signal app_closed
 func _ready()->void:
 	set_items_by_path.call_deferred(Globals.current_dir)
 #	ae_btn.pressed.connect(show_ae_menu)
-#	d_btn.pressed.connect(show_disclaimer)
+	d_btn.pressed.connect(show_disclaimer)
 #	t_btn.pressed.connect(show_tutorial)
 	fe_btn.pressed.connect(exit_folder)
 	back_btn.pressed.connect(prev_page)
@@ -200,7 +200,7 @@ func prev_page() -> void:
 func show_disclaimer()->void:
 	var DISCLAIMERPRELOAD: PackedScene = preload("res://scenes/app/disclaimer/disclaimer.tscn")
 	var disclaimer:Control = DISCLAIMERPRELOAD.instantiate()
-	get_tree().current_scene.add_child(disclaimer)
+	add_child(disclaimer)
 
 #func show_tutorial()->void:
 #	var TUTORIALPRELOAD: PackedScene = preload()

@@ -5,8 +5,10 @@ extends Control
 var current_page: int = 0
 const TOTAL_PAGES: int = 3
 const PAGE_WIDTH: int = 640 # 600px panel width + 40px HBox separation
+var _previous_focus: Control = null
 
 func _ready() -> void:
+	_previous_focus = get_viewport().gui_get_focus_owner()
 	# Jump to a specific pixel position
 	scroll_container.scroll_horizontal = 0
 	grab_focus()
@@ -24,6 +26,7 @@ func _input(event: InputEvent) -> void:
 			smooth_scroll_to(current_page * PAGE_WIDTH)
 		else:
 			smooth_fade_to_and_kill(0)
+			_previous_focus.grab_focus()
 		get_viewport().set_input_as_handled()
 
 func smooth_fade_to_and_kill(op: int, duration: float = 0.3) -> void:
