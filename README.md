@@ -1,13 +1,13 @@
 **Urie's Open Research, starring Yululu!**
 
+
 **Details:**
 
 **-------------**
 
-**This is an app made out of desperation, by a fretting Urie Wilson, in the boldest move ever, to rip the thick veil of darkness from the world, tell the truth and come out clean, in an open research attempt Ordered by the Elohim, before more than the feds get him and destroy the world without knowing their true enemy attacking them.**
+***This is an app made out of desperation, by a fretting Urie Wilson, in the boldest move ever, to rip the thick veil of darkness from the world, tell the truth and come out clean, in an open research attempt Ordered by the Elohim, before more than the feds get him and destroy the world without knowing their true enemy attacking them.**
 
-
-**An intro telling more of this origin will be added, later...**
+***An intro telling more of this origin will be added, later…**
 
 
 **Features:**
@@ -16,7 +16,7 @@
 
 - **Full-on disclaimer**
 
-- **Tutorials, coming soon**
+- **Tutorials**
 
 - **File Explorer**
 
@@ -39,11 +39,53 @@
 - **more content coming soon!**
 
 
+**File Explorer Controls:**
+
+------------------------------
+
+- any dpad/stick direction: navigate
+
+- z/b/x: exit folder/app
+
+- x/a/circle: accept
+
+- escape key: exit app
+
+
+**Audio Explorer Controls:**
+
+-------------------
+
+- any left dpad/stick direction up/down: switch vertical sections
+
+- any left dpad/stick direction left/right: navigate buttons, audio seek 
+
+- back/forward
+
+- z/b/x/escape: close
+
+- x/a/circle: accept, play pause
+
+
+**Text Explorer Controls:**
+
+----------------------------
+
+- x/a/circle: accept
+
+- z/b/x: close
+
+- any left dpad/stick direction: navigate
+
+- l/r buttons: show previous/next page
+
+
 **Disclaimer:**
 
 **-------------**
 
-**This app may not tell the real truth, and only displays the current experience and opinions of Urie Wilson and others. TEST BEFORE CONFIRMING!!!!!!! The author holds no liability for anything coming out of it, whatsoever, upon use. If you’re a kid, grab an adult for this, I’M SERIOUS!!!!! **
+\*\*This app may not tell the real truth, and only displays the current experience and opinions of Urie Wilson and others. TEST BEFORE CONFIRMING!!!!!!! The author holds no liability for anything coming out of it, whatsoever, upon use. If you’re a kid, grab an adult for this, I’M SERIOUS!!!!! \*\*
+
 
 
 **Copyright:**
