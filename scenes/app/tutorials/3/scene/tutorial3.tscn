@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ehubml52qq2u"]
 
 [ext_resource type="Script" uid="uid://cy7wfgjh6b8sr" path="res://scripts/app/tutorials/3/scene/tutorial3.gd" id="1_7sbo2"]
-[ext_resource type="PackedScene" uid="uid://oh57yjxape3p" path="res://scenes/app/tutorials/3/app menu/app_menu.tscn" id="2_7xilc"]
+[ext_resource type="PackedScene" uid="uid://oh57yjxape3p" path="res://scenes/app/tutorials/3/app menu/app_menu3.tscn" id="2_7xilc"]
 
 [node name="tutorial" type="Control" unique_id=723586073]
 layout_mode = 3

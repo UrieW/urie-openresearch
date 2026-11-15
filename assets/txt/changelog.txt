@@ -210,4 +210,8 @@ panel and app escape menus left...
 of app menu clones, and i've fully fixed the tutorials, with inkscape,
 even though, the text explorer was fine on its own, yeah...gotta report 
 that to the godot team...
+11/14 - ****** system nearly complete, now to make universal 
+'are you sure' button and scripts for both, text edited app menu scenes
+before renaming them to temporarily remove scene inheritance bug
+
 

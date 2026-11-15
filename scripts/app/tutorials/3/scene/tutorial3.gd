@@ -1,9 +1,9 @@
 extends Control
 
 @onready var scrolls: ScrollContainer = $scrolls
-var def_scrolls = preload("res://scenes/app/tutorials/3/app menu/app_menu.tscn")
-var alt_scrolls1 = preload("res://scenes/app/tutorials/3/events/event1.tscn")
-var alt_scrolls2 = preload("res://scenes/app/tutorials/3/events/event2.tscn")
+var def_scrolls = preload("res://scenes/app/tutorials/3/app menu/app_menu3.tscn")
+var alt_scrolls1 = preload("res://scenes/app/tutorials/3/events/event3-1.tscn")
+var alt_scrolls2 = preload("res://scenes/app/tutorials/3/events/event3-2.tscn")
 
 var current_page: int = 0
 const TOTAL_PAGES: int = 9

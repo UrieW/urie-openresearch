@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://yrehafbj2g4o"]
+
+[ext_resource type="StyleBox" uid="uid://dov5ojj1ufpxr" path="res://shaders/windowstyle1.tres" id="1_8ggrm"]
+[ext_resource type="StyleBox" uid="uid://doemc87hij5dg" path="res://shaders/yes_btn.tres" id="2_yew06"]
+[ext_resource type="StyleBox" uid="uid://dqwray4xflvdi" path="res://shaders/no_btn.tres" id="3_ge7v3"]
+[ext_resource type="StyleBox" uid="uid://r3c02sm7cdey" path="res://shaders/app_event.tres" id="4_yew06"]
+
+[node name="vpanel" type="Control" unique_id=2121385418]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="bkg" type="Panel" parent="." unique_id=1397014929]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="pmargs" type="MarginContainer" parent="." unique_id=1628397842]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 83.0
+offset_right = 476.0
+offset_bottom = 309.0
+
+[node name="pwin" type="Panel" parent="pmargs" unique_id=254731015]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_8ggrm")
+
+[node name="pwinmargs" type="MarginContainer" parent="pmargs/pwin" unique_id=1616727566]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="vbox" type="VBoxContainer" parent="pmargs/pwin/pwinmargs" unique_id=248706768]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="info" type="Label" parent="pmargs/pwin/pwinmargs/vbox" unique_id=404926656]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Pick the button based on your opinion."
+horizontal_alignment = 1
+
+[node name="btnmargs" type="MarginContainer" parent="pmargs/pwin/pwinmargs/vbox" unique_id=1736543070]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 10
+
+[node name="votes" type="HBoxContainer" parent="pmargs/pwin/pwinmargs/vbox/btnmargs" unique_id=918961672]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 43
+
+[node name="Panel" type="Panel" parent="pmargs/pwin/pwinmargs/vbox/btnmargs/votes" unique_id=1688639010]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("2_yew06")
+
+[node name="Yes" type="Button" parent="pmargs/pwin/pwinmargs/vbox/btnmargs/votes/Panel" unique_id=118783880]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "Yes"
+flat = true
+
+[node name="Panel2" type="Panel" parent="pmargs/pwin/pwinmargs/vbox/btnmargs/votes" unique_id=1091149306]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_ge7v3")
+
+[node name="No" type="Button" parent="pmargs/pwin/pwinmargs/vbox/btnmargs/votes/Panel2" unique_id=420383487]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "No"
+flat = true
+
+[node name="btnmargs2" type="MarginContainer" parent="pmargs/pwin/pwinmargs/vbox" unique_id=1991735082]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 15
+
+[node name="Panel" type="Panel" parent="pmargs/pwin/pwinmargs/vbox/btnmargs2" unique_id=463269501]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("4_yew06")
+
+[node name="Cancel" type="Button" parent="pmargs/pwin/pwinmargs/vbox/btnmargs2/Panel" unique_id=753370484]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "Cancel"
+flat = true
+
+[node name="cinfo1" type="Label" parent="pmargs/pwin/pwinmargs/vbox" unique_id=1728180276]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Y for Yes, N for No"
+horizontal_alignment = 1
+
+[node name="cinfo2" type="Label" parent="pmargs/pwin/pwinmargs/vbox" unique_id=1227733608]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Y for Yes, N for No"
+horizontal_alignment = 1
