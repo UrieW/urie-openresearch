@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://rwl8ny3g0k0"]
+
+[ext_resource type="Script" uid="uid://d0gkkbkbdbtxa" path="res://scripts/app/exit/exit.gd" id="1_y0rot"]
+[ext_resource type="PackedScene" uid="uid://c1oq0s6je4rkw" path="res://scenes/app/confirm/confirm.tscn" id="2_sce1f"]
+
+[node name="exit" type="Control" unique_id=2121385418]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+script = ExtResource("1_y0rot")
+
+[node name="bkg" type="Panel" parent="." unique_id=1397014929]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="pmargs2" parent="." unique_id=1633696095 instance=ExtResource("2_sce1f")]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 62.0
+offset_right = 475.0
+offset_bottom = 288.0

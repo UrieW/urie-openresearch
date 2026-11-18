@@ -33,7 +33,7 @@ func _ready()->void:
 	fe_btn.pressed.connect(exit_folder)
 	back_btn.pressed.connect(prev_page)
 	nxt_btn.pressed.connect(next_page)
-#	ea_btn.pressed.connect(exit_explorer)
+	ea_btn.pressed.connect(exit_explorer)
 	
 func set_items(new_items: Array) -> void:
 	all_items = new_items
@@ -251,7 +251,7 @@ func check_entry(target:Button)->void:
 		enter_file(rslot.report)
 		
 func exit_explorer()->void:
-	#open_universal_menu
-	#if yes:
-	#fade_out
-	app_closed.emit()
+	var app_exit_scene_preload: PackedScene = preload("res://scenes/app/exit/exit.tscn")
+	var exit_scene: Control = app_exit_scene_preload.instantiate()
+	add_child(exit_scene)
+	 

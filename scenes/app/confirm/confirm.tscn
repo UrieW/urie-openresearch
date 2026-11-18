@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://c1oq0s6je4rkw"]
+
+[ext_resource type="StyleBox" uid="uid://dov5ojj1ufpxr" path="res://shaders/windowstyle1.tres" id="1_mwksm"]
+[ext_resource type="StyleBox" uid="uid://doemc87hij5dg" path="res://shaders/yes_btn.tres" id="2_y85fj"]
+[ext_resource type="StyleBox" uid="uid://dqwray4xflvdi" path="res://shaders/no_btn.tres" id="3_mwlao"]
+
+[node name="confirm" type="MarginContainer" unique_id=1633696095]
+custom_minimum_size = Vector2(332, 226)
+offset_left = 144.0
+offset_top = 83.0
+offset_right = 476.0
+offset_bottom = 309.0
+
+[node name="pwin" type="Panel" parent="." unique_id=979064175]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_mwksm")
+
+[node name="pwinmargs" type="MarginContainer" parent="pwin" unique_id=1258183612]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="vbox" type="VBoxContainer" parent="pwin/pwinmargs" unique_id=1319881799]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="info" type="Label" parent="pwin/pwinmargs/vbox" unique_id=1465275768]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Are you sure?"
+horizontal_alignment = 1
+
+[node name="btnmargs" type="MarginContainer" parent="pwin/pwinmargs/vbox" unique_id=1284561207]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 10
+
+[node name="votes" type="HBoxContainer" parent="pwin/pwinmargs/vbox/btnmargs" unique_id=524735644]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 43
+
+[node name="Panel" type="Panel" parent="pwin/pwinmargs/vbox/btnmargs/votes" unique_id=1434150301]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("2_y85fj")
+
+[node name="Yes" type="Button" parent="pwin/pwinmargs/vbox/btnmargs/votes/Panel" unique_id=1762778866]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "Yes"
+flat = true
+
+[node name="Panel2" type="Panel" parent="pwin/pwinmargs/vbox/btnmargs/votes" unique_id=380862944]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_mwlao")
+
+[node name="No" type="Button" parent="pwin/pwinmargs/vbox/btnmargs/votes/Panel2" unique_id=1776757162]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 8
+text = "No"
+flat = true
+
+[node name="cinfo1" type="Label" parent="pwin/pwinmargs/vbox" unique_id=2075681172]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Move to or pick button from screen"
+horizontal_alignment = 1
+
+[node name="cinfo2" type="Label" parent="pwin/pwinmargs/vbox" unique_id=1577211614]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Will prove action."
+horizontal_alignment = 1

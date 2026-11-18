@@ -118,11 +118,10 @@ func show_tutorial():
 	var tutorial: Control = TUTORIALPRELOAD.instantiate()
 	add_child(tutorial)
 	
-#func show_voting_page():
-#	var VOTINGPANELPRELOAD: PackedScene = preload()
-#	var voting_panel: Control = VOTINGPANELPRELOAD.instantiate()
-#	get_tree().current_scene.add_child(voting_panel)
-#	votingpanel.unhide()
+func show_voting_page():
+	var VOTINGPANELPRELOAD: PackedScene = preload("res://scenes/app/vpanel/vpanel.tscn")
+	var voting_panel: Control = VOTINGPANELPRELOAD.instantiate()
+	add_child(voting_panel)
 	
 func close_doc():
 	#shifts to the folder it was in...

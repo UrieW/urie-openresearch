@@ -213,5 +213,18 @@ that to the godot team...
 11/14 - ****** system nearly complete, now to make universal 
 'are you sure' button and scripts for both, text edited app menu scenes
 before renaming them to temporarily remove scene inheritance bug
-
+11/16 - gained a clean-shot-worthy idea to make a script, that
+makes a script, that make a dictionary for every report folder and records
+every report's data, as a set of tool scripts...
+11/16 - cloned ****** panel, to make 'universal are you sure' button,
+about to do app menu for tutorial scenes that way to make app events 
+button event, right now...
+11/17 - completed 'universal are you sure' button, cloned its script for
+****** panel, made app events section from a tutorial i just cloned AND
+changed, going into overtime...
+11/18 - fully completed ****** panel so far, now to code its parent
+triggering it and unlock it to actually test it...
+11/18 - nearly unlocked, coded and ran all resources, but the app events,
+now testing of the ****** panel and exit button is one test away, will try
+in the afternoon...
 
