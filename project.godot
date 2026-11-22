@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*uid://ddjl7tn5gghi1"
+Votemanager="*uid://ul7p4h4cof8c"
 
 [display]
 

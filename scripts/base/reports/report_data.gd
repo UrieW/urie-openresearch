@@ -5,5 +5,9 @@ class_name ReportData
 @export var author: String
 @export var date: String
 @export var desc: String
-var yvotes: int
-var nvotes: int
+
+
+func get_report_id() -> String:
+	# Converts "res://reports/podcasts/dreams/log1.tres" -> "podcasts/dreams/log1"
+	return resource_path.replace("res://reports/", "").trim_suffix(".tres")
+	

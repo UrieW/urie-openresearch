@@ -116,5 +116,5 @@ horizontal_alignment = 1
 [node name="cinfo2" type="Label" parent="pwin/pwinmargs/vbox" unique_id=629288420]
 layout_mode = 2
 theme_override_constants/outline_size = 8
-text = "This doc = only 1 kept vote per hour "
+text = "This doc = only 1 kept vote per 10 hours "
 horizontal_alignment = 1

@@ -31,7 +31,7 @@ func _ready() -> void:
 	dbtn.pressed.connect(show_disclaimer)
 	tbtn.pressed.connect(show_tutorial)
 	close_btn.pressed.connect(close_doc)
-#	vbtn.pressed.connect(show_voting_panel)
+	vbtn.pressed.connect(show_voting_page)
 	
 	# 1. Wire UI events up cleanly
 	play_pause_btn.pressed.connect(_on_play_pause_pressed)

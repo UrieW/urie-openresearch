@@ -58,3 +58,18 @@ text = "Length:"
 layout_mode = 2
 theme_override_constants/outline_size = 8
 text = "lnum"
+
+[node name="votelabel" type="Label" parent="." unique_id=504272996]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Votes:"
+
+[node name="yesvtext" type="Label" parent="." unique_id=703116001]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "Y: ynum"
+
+[node name="novtext" type="Label" parent="." unique_id=1555689208]
+layout_mode = 2
+theme_override_constants/outline_size = 8
+text = "N: nnum"

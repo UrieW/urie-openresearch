@@ -23,7 +23,6 @@ const FolderItemButtonPreload = preload("res://scenes/ui/buttons/navigation/item
 var all_items: Array = []
 var current_page: int = 0
 var total_pages: int = 1
-signal app_closed
 
 func _ready()->void:
 	set_items_by_path.call_deferred(Globals.current_dir)
@@ -254,4 +253,4 @@ func exit_explorer()->void:
 	var app_exit_scene_preload: PackedScene = preload("res://scenes/app/exit/exit.tscn")
 	var exit_scene: Control = app_exit_scene_preload.instantiate()
 	add_child(exit_scene)
-	 
+	

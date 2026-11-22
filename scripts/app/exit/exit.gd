@@ -29,19 +29,19 @@ func _ready() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		if get_parent().scene_file_path == file_exp.resource_path:
-			if file_exp.has_signal("app_closed"):
-				prev_focus.grab_focus()
-				get_viewport().set_input_as_handled()
-				
-	queue_free()
+		get_viewport().set_input_as_handled()
+		revert_event()
 
 func close_app()->void:
-	if  get_parent().scene_file_path == file_exp.resource_path:
-		file_exp.app_closed.emit()
+	var app_root := get_parent().get_parent().get_parent()
+	if app_root and app_root.has_signal("app_closed"):
+		app_root.app_closed.emit()
+	elif get_parent().get_parent().has_signal("app_closed"):
+		get_parent().get_parent().app_closed.emit()
 	queue_free()
 	
 func revert_event()->void:
-	prev_focus.grab_focus()
+	if is_instance_valid(prev_focus):
+		prev_focus.grab_focus()
 	queue_free()
 	

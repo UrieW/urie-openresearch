@@ -16,6 +16,22 @@ var target_vote: String = "none"
 var already_voted:bool = false
 
 func _ready() -> void:
+	# ... your existing focus and button signal connections ...
+	
+	var report_id: String = Globals.current_report.get_report_id()
+	var prev_vote: String = Votemanager.get_previous_vote(report_id)
+	already_voted = (prev_vote != "none")
+	
+	if not Votemanager.can_vote(report_id):
+		var secs_left := Votemanager.get_remaining_cooldown(report_id)
+		var hours_left := ceili(secs_left / 3600.0)
+		
+		y_btn.disabled = true
+		n_btn.disabled = true
+		cancel_btn.grab_focus()
+		# Optional: update a Label in your popup to say:
+		# "You already voted (%s). Change available in ~%d hr(s)." % [prev_vote, hours_left]
+
 	prev_focus = get_viewport().gui_get_focus_owner()
 	
 	y_btn.pressed.connect(get_yes_vote)
@@ -58,17 +74,17 @@ func _input(event: InputEvent) -> void:
 			revert_event()
 			get_viewport().set_input_as_handled()
 				
-	queue_free()
+		queue_free()
 	
 func revert_event()->void:
 	if ex_y_btn.has_focus():
 		$pmargs2.hide()
-		$pmargs.unhide()
+		$pmargs.show()
 		y_btn.grab_focus()
 		target_vote = "none"
 	elif ex_n_btn.has_focus():
 		$pmargs2.hide()
-		$pmargs.unhide()
+		$pmargs.show()
 		n_btn.grab_focus()
 		target_vote = "none"
 	else:
@@ -78,21 +94,24 @@ func revert_event()->void:
 func get_yes_vote()->void:
 	target_vote = "y"
 	$pmargs.hide()
-	$pmargs2.unhide()
+	$pmargs2.show()
 	ex_y_btn.grab_focus()
 	
 func get_no_vote()->void:
 	target_vote = "n"
 	$pmargs.hide()
-	$pmargs2.unhide()
+	$pmargs2.show()
 	ex_y_btn.grab_focus()
 
-func vote()->void:
+func vote() -> void:
+	var report_id: String = Globals.current_report.get_report_id()
+	
 	if target_vote == "y":
-		if already_voted:
-			Globals.current_report.nvotes -= 1
-		Globals.current_report.yvotes += 1
+		Votemanager.cast_vote(report_id, "yes")
+		already_voted = true
 	elif target_vote == "n":
-		if already_voted:
-			Globals.current_report.yvotes -= 1
-		Globals.current_report.nvotes += 1
+		Votemanager.cast_vote(report_id, "no")
+		already_voted = true
+	
+	prev_focus.grab_focus()
+	queue_free()

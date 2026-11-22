@@ -4,13 +4,18 @@ extends Node
 signal text_opened
 signal audio_opened
 
-#scrolling bkg, somehow, n ot refffed yet, grrrrrr...
+#app close signals
+signal app_closed
+
+#scrolling bkg, yay, fixed, XD!
 @onready var s_bkg = $sbkg
 
 # Reference to the container node where the scene will be injected
 @onready var container = $subscnbox
 
 # Preload the sub-scenes you want to swap between
+var title = preload("res://scenes/app/title/title.tscn")
+
 var scene_a = preload("res://scenes/app/explorers/file_explorer.tscn")
 var scene_b = preload("res://scenes/app/explorers/audio_explorer.tscn")
 var scene_c = preload("res://scenes/app/explorers/text_explorer.tscn")
@@ -22,6 +27,7 @@ var current_sub_scene = null
 func _ready() -> void:
 	# Load the default scene when starting
 	switch_sub_scene(scene_a)
+	app_closed.connect(on_app_closed)
 	text_opened.connect(on_text_opened)
 	audio_opened.connect(on_audio_opened)
 
@@ -85,3 +91,6 @@ func on_audio_opened()->void:
 func on_text_opened()->void:
 	s_bkg.transition_to_background(s_bkg.bkgt3)
 	switch_sub_scene(scene_c)
+	
+func on_app_closed()->void:
+	switch_sub_scene(title)

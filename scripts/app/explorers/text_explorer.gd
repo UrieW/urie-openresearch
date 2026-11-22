@@ -27,7 +27,7 @@ func _ready() -> void:
 	tbtn.pressed.connect(show_tutorial)
 	back_btn.pressed.connect(prev_page)
 	next_btn.pressed.connect(next_page)
-#	vote_btn.pressed.connect(show_voting_page)
+	vote_btn.pressed.connect(show_voting_page)
 	exit_btn.pressed.connect(close_doc)
 	
 	if c_report.pages > 1:
