@@ -17,21 +17,23 @@ var already_voted:bool = false
 
 func _ready() -> void:
 	# ... your existing focus and button signal connections ...
-	
 	var report_id: String = Globals.current_report.get_report_id()
 	var prev_vote: String = Votemanager.get_previous_vote(report_id)
 	already_voted = (prev_vote != "none")
 	
 	if not Votemanager.can_vote(report_id):
 		var secs_left := Votemanager.get_remaining_cooldown(report_id)
-		var hours_left := ceili(secs_left / 3600.0)
+		var hours_left := ceili(secs_left / 3600.0) # <-- Calculated here
 		
 		y_btn.disabled = true
 		n_btn.disabled = true
 		cancel_btn.grab_focus()
 		# Optional: update a Label in your popup to say:
-		# "You already voted (%s). Change available in ~%d hr(s)." % [prev_vote, hours_left]
-
+		$pmargs/pwin/pwinmargs/vbox/cinfo2.text = "You already voted (%s). Change available in ~%d hr(s)." % [prev_vote, hours_left]
+	else:
+		$pmargs/pwin/pwinmargs/vbox/cinfo2.text = "This doc = only 1 kept vote per 10 hours"
+		y_btn.grab_focus()
+		
 	prev_focus = get_viewport().gui_get_focus_owner()
 	
 	y_btn.pressed.connect(get_yes_vote)
@@ -66,11 +68,9 @@ func _ready() -> void:
 	ex_n_btn.focus_neighbor_left = ex_y_btn.get_path()
 	ex_n_btn.focus_neighbor_right = ex_y_btn.get_path()
 	
-	y_btn.grab_focus()
-	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		if get_parent().scene_file_path == text_exp.resource_path or audio_exp.resource_path:
+		if get_parent().scene_file_path in [text_exp.resource_path, audio_exp.resource_path]:
 			revert_event()
 			get_viewport().set_input_as_handled()
 				
